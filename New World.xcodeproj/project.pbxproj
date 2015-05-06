@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425D91AF9C8DA00CF08DA /* AppDelegate.swift */; };
+		423425DC1AF9C8DA00CF08DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425DB1AF9C8DA00CF08DA /* ViewController.swift */; };
+		423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423425DD1AF9C8DB00CF08DA /* Images.xcassets */; };
+		423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423425DF1AF9C8DC00CF08DA /* Main.storyboard */; };
+		423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		423425E71AF9C8DC00CF08DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423425CC1AF9C8D700CF08DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 423425D31AF9C8D800CF08DA;
+			remoteInfo = "New World";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		423425D41AF9C8D800CF08DA /* New World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		423425D81AF9C8D900CF08DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423425D91AF9C8DA00CF08DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		423425DB1AF9C8DA00CF08DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423425DD1AF9C8DB00CF08DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		423425E01AF9C8DC00CF08DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		423425E61AF9C8DC00CF08DA /* New WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		423425EB1AF9C8DE00CF08DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_WorldTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		423425D11AF9C8D800CF08DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423425E31AF9C8DC00CF08DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		423425CB1AF9C8D700CF08DA = {
+			isa = PBXGroup;
+			children = (
+				423425D61AF9C8D800CF08DA /* New World */,
+				423425E91AF9C8DD00CF08DA /* New WorldTests */,
+				423425D51AF9C8D800CF08DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		423425D51AF9C8D800CF08DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				423425D41AF9C8D800CF08DA /* New World.app */,
+				423425E61AF9C8DC00CF08DA /* New WorldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		423425D61AF9C8D800CF08DA /* New World */ = {
+			isa = PBXGroup;
+			children = (
+				423425D91AF9C8DA00CF08DA /* AppDelegate.swift */,
+				423425DB1AF9C8DA00CF08DA /* ViewController.swift */,
+				423425DD1AF9C8DB00CF08DA /* Images.xcassets */,
+				423425DF1AF9C8DC00CF08DA /* Main.storyboard */,
+				423425D71AF9C8D900CF08DA /* Supporting Files */,
+			);
+			path = "New World";
+			sourceTree = "<group>";
+		};
+		423425D71AF9C8D900CF08DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				423425D81AF9C8D900CF08DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		423425E91AF9C8DD00CF08DA /* New WorldTests */ = {
+			isa = PBXGroup;
+			children = (
+				423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */,
+				423425EA1AF9C8DE00CF08DA /* Supporting Files */,
+			);
+			path = "New WorldTests";
+			sourceTree = "<group>";
+		};
+		423425EA1AF9C8DE00CF08DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				423425EB1AF9C8DE00CF08DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		423425D31AF9C8D800CF08DA /* New World */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423425F01AF9C8DE00CF08DA /* Build configuration list for PBXNativeTarget "New World" */;
+			buildPhases = (
+				423425D01AF9C8D800CF08DA /* Sources */,
+				423425D11AF9C8D800CF08DA /* Frameworks */,
+				423425D21AF9C8D800CF08DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New World";
+			productName = "New World";
+			productReference = 423425D41AF9C8D800CF08DA /* New World.app */;
+			productType = "com.apple.product-type.application";
+		};
+		423425E51AF9C8DC00CF08DA /* New WorldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423425F31AF9C8DE00CF08DA /* Build configuration list for PBXNativeTarget "New WorldTests" */;
+			buildPhases = (
+				423425E21AF9C8DC00CF08DA /* Sources */,
+				423425E31AF9C8DC00CF08DA /* Frameworks */,
+				423425E41AF9C8DC00CF08DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				423425E81AF9C8DC00CF08DA /* PBXTargetDependency */,
+			);
+			name = "New WorldTests";
+			productName = "New WorldTests";
+			productReference = 423425E61AF9C8DC00CF08DA /* New WorldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		423425CC1AF9C8D700CF08DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Huw;
+				TargetAttributes = {
+					423425D31AF9C8D800CF08DA = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					423425E51AF9C8DC00CF08DA = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 423425D31AF9C8D800CF08DA;
+					};
+				};
+			};
+			buildConfigurationList = 423425CF1AF9C8D700CF08DA /* Build configuration list for PBXProject "New World" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 423425CB1AF9C8D700CF08DA;
+			productRefGroup = 423425D51AF9C8D800CF08DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				423425D31AF9C8D800CF08DA /* New World */,
+				423425E51AF9C8DC00CF08DA /* New WorldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		423425D21AF9C8D800CF08DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
+				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423425E41AF9C8DC00CF08DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		423425D01AF9C8D800CF08DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423425DC1AF9C8DA00CF08DA /* ViewController.swift in Sources */,
+				423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423425E21AF9C8DC00CF08DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		423425E81AF9C8DC00CF08DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 423425D31AF9C8D800CF08DA /* New World */;
+			targetProxy = 423425E71AF9C8DC00CF08DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		423425DF1AF9C8DC00CF08DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423425E01AF9C8DC00CF08DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		423425EE1AF9C8DE00CF08DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		423425EF1AF9C8DE00CF08DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		423425F11AF9C8DE00CF08DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "New World/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		423425F21AF9C8DE00CF08DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "New World/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		423425F41AF9C8DE00CF08DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "New WorldTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New World.app/Contents/MacOS/New World";
+			};
+			name = Debug;
+		};
+		423425F51AF9C8DE00CF08DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "New WorldTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New World.app/Contents/MacOS/New World";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		423425CF1AF9C8D700CF08DA /* Build configuration list for PBXProject "New World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423425EE1AF9C8DE00CF08DA /* Debug */,
+				423425EF1AF9C8DE00CF08DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		423425F01AF9C8DE00CF08DA /* Build configuration list for PBXNativeTarget "New World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423425F11AF9C8DE00CF08DA /* Debug */,
+				423425F21AF9C8DE00CF08DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		423425F31AF9C8DE00CF08DA /* Build configuration list for PBXNativeTarget "New WorldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423425F41AF9C8DE00CF08DA /* Debug */,
+				423425F51AF9C8DE00CF08DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 423425CC1AF9C8D700CF08DA /* Project object */;
+}
