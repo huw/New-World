@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425D91AF9C8DA00CF08DA /* AppDelegate.swift */; };
-		423425DC1AF9C8DA00CF08DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425DB1AF9C8DA00CF08DA /* ViewController.swift */; };
+		423425DC1AF9C8DA00CF08DA /* TitleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425DB1AF9C8DA00CF08DA /* TitleScreenController.swift */; };
 		423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423425DD1AF9C8DB00CF08DA /* Images.xcassets */; };
 		423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423425DF1AF9C8DC00CF08DA /* Main.storyboard */; };
 		423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */; };
+		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +29,13 @@
 		423425D41AF9C8D800CF08DA /* New World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423425D81AF9C8D900CF08DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		423425D91AF9C8DA00CF08DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		423425DB1AF9C8DA00CF08DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423425DB1AF9C8DA00CF08DA /* TitleScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenController.swift; sourceTree = "<group>"; };
 		423425DD1AF9C8DB00CF08DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		423425E01AF9C8DC00CF08DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		423425E61AF9C8DC00CF08DA /* New WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423425EB1AF9C8DE00CF08DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_WorldTests.swift; sourceTree = "<group>"; };
+		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,10 @@
 			isa = PBXGroup;
 			children = (
 				423425D91AF9C8DA00CF08DA /* AppDelegate.swift */,
-				423425DB1AF9C8DA00CF08DA /* ViewController.swift */,
+				423425DB1AF9C8DA00CF08DA /* TitleScreenController.swift */,
 				423425DD1AF9C8DB00CF08DA /* Images.xcassets */,
 				423425DF1AF9C8DC00CF08DA /* Main.storyboard */,
+				428EE90E1B005C0B0003FB7C /* MainWindowController.swift */,
 				423425D71AF9C8D900CF08DA /* Supporting Files */,
 			);
 			path = "New World";
@@ -208,8 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423425DC1AF9C8DA00CF08DA /* ViewController.swift in Sources */,
+				423425DC1AF9C8DA00CF08DA /* TitleScreenController.swift in Sources */,
 				423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */,
+				428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 				423425F21AF9C8DE00CF08DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		423425F31AF9C8DE00CF08DA /* Build configuration list for PBXNativeTarget "New WorldTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				423425F51AF9C8DE00CF08DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
