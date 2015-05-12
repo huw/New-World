@@ -1,27 +1,28 @@
 //
-//  ViewController.swift
+//  TitleScreenController.swift
 //  New World
 //
-//  Created by Huw on 2015-05-06.
+//  Created by Huw on 2015-05-12.
 //  Copyright (c) 2015 Huw. All rights reserved.
 //
 
 import Cocoa
+import AVKit
 
-class TitleScreenController: NSViewController {
+class TitleScreenController: MoviewController {
 
+    @IBOutlet weak var playButton: NSButton!
+    @IBOutlet weak var quitButton: NSButton!
+    @IBOutlet weak var player: AVPlayerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.bgMovie = player
+        self.fileName = "titlescreen"
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        exit(0)
     }
-
-
 }
-

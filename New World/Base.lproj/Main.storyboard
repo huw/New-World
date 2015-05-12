@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="7702"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
     </dependencies>
     <scenes>
@@ -100,15 +101,79 @@
         <!--Title Screen-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Title Screen" id="XfG-lQ-9wD" customClass="TitleScreenController" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController title="Title Screen" id="XfG-lQ-9wD" customClass="TitleScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-Rh-IdR">
+                                <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                                <subviews>
+                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-l8-eIL">
+                                        <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
+                                    </avPlayerView>
+                                </subviews>
+                                <contentFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                            </visualEffectView>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-eH-AJE">
+                                <rect key="frame" x="458" y="425" width="364" height="76"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="NEW WORLD" id="Tbb-uC-o8M">
+                                    <font key="font" size="63" name="UniSansHeavyCAPS"/>
+                                    <color key="textColor" red="1" green="0.86274509803921573" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-Oa-rhl">
+                                <rect key="frame" x="512" y="307" width="256" height="40"/>
+                                <shadow key="shadow">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="QUIT" bezelStyle="texturedSquare" image="Button_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="3X7-L7-4hy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="22"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonPressed:" target="XfG-lQ-9wD" id="P7A-9b-Jix"/>
+                                </connections>
+                            </button>
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-27-YoH">
+                                <rect key="frame" x="512" y="382" width="256" height="40"/>
+                                <shadow key="shadow">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="PLAY" bezelStyle="texturedSquare" image="Button_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="lBq-6c-Pdj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="22"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="bgMovie" destination="xCc-l8-eIL" id="YjM-FP-h6f"/>
+                        <outlet property="playButton" destination="Rjr-Oa-rhl" id="uBO-fb-9dU"/>
+                        <outlet property="player" destination="xCc-l8-eIL" id="T35-Hn-1tp"/>
+                        <outlet property="quitButton" destination="Rjr-Oa-rhl" id="8rA-X1-R5t"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="853"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button_BG" width="256" height="43"/>
+    </resources>
 </document>
