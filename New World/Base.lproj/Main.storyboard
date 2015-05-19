@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="7702"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
@@ -158,6 +158,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="22"/>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="zsH-BL-Tha" kind="show" id="2Jp-4I-AG0"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -171,6 +174,65 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="853"/>
+        </scene>
+        <!--City Screen-->
+        <scene sceneID="9Nb-8A-tPc">
+            <objects>
+                <viewController title="City Screen" id="zsH-BL-Tha" customClass="TitleScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="1l2-xn-hoo">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="V2X-Ep-Gd6">
+                                <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                                <subviews>
+                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Zh-KRa">
+                                        <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
+                                    </avPlayerView>
+                                </subviews>
+                                <contentFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                            </visualEffectView>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2z-3C-yxP">
+                                <rect key="frame" x="29" y="660" width="1000" height="85"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="LOCATION" id="12I-V9-Ioz">
+                                    <font key="font" size="71" name="UniSansHeavyCAPS"/>
+                                    <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mf-kB-MZE">
+                                <rect key="frame" x="29" y="745" width="133" height="26"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Welcome To" id="tUN-RE-erh">
+                                    <font key="font" size="22" name="UniSansHeavyCAPS"/>
+                                    <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="bgMovie" destination="dsh-Zh-KRa" id="o4n-Ch-pZp"/>
+                        <outlet property="player" destination="dsh-Zh-KRa" id="KBH-i5-ywD"/>
+                    </connections>
+                </viewController>
+                <customObject id="Gpm-VL-jOf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="853"/>
         </scene>
     </scenes>
     <resources>
