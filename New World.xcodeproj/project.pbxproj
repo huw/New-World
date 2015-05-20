@@ -16,6 +16,7 @@
 		423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423425DD1AF9C8DB00CF08DA /* Images.xcassets */; };
 		423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423425DF1AF9C8DC00CF08DA /* Main.storyboard */; };
 		423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */; };
+		4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266060E1B0AB5190065C32B /* CityScreenController.swift */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
 		428EE9111B0064160003FB7C /* titlescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 428EE9101B0064160003FB7C /* titlescreen.mp4 */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		423425E61AF9C8DC00CF08DA /* New WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423425EB1AF9C8DE00CF08DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_WorldTests.swift; sourceTree = "<group>"; };
+		4266060E1B0AB5190065C32B /* CityScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityScreenController.swift; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		428EE9101B0064160003FB7C /* titlescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = titlescreen.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				423425DB1AF9C8DA00CF08DA /* MoviewController.swift */,
 				423425DD1AF9C8DB00CF08DA /* Images.xcassets */,
 				423425DF1AF9C8DC00CF08DA /* Main.storyboard */,
+				4266060E1B0AB5190065C32B /* CityScreenController.swift */,
 				4222B19A1B01A65F00FCBA0F /* TitleScreenController.swift */,
 				428EE90E1B005C0B0003FB7C /* MainWindowController.swift */,
 				423425D71AF9C8D900CF08DA /* Supporting Files */,
@@ -232,6 +235,7 @@
 			files = (
 				4222B19B1B01A65F00FCBA0F /* TitleScreenController.swift in Sources */,
 				423425DC1AF9C8DA00CF08DA /* MoviewController.swift in Sources */,
+				4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */,
 				423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */,
 				428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */,
 			);

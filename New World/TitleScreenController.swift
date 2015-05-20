@@ -11,18 +11,20 @@ import AVKit
 
 class TitleScreenController: MoviewController {
 
-    @IBOutlet weak var playButton: NSButton!
-    @IBOutlet weak var quitButton: NSButton!
     @IBOutlet weak var player: AVPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bgMovie = player
-        self.fileName = "titlescreen"
+        self.playVideo(player, fileName: "titlescreen")
     }
     
-    @IBAction func buttonPressed(sender: AnyObject) {
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        player.player.pause()
+    }
+    
+    @IBAction func quitButton(sender: AnyObject) {
+        println("QUIT")
         exit(0)
     }
 }

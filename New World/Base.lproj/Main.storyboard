@@ -106,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-Rh-IdR">
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-Rh-IdR" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                                 <subviews>
                                     <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-l8-eIL">
@@ -122,7 +122,7 @@
                                     </ciFilter>
                                 </contentFilters>
                             </visualEffectView>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-eH-AJE">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-eH-AJE" userLabel="New World">
                                 <rect key="frame" x="458" y="425" width="364" height="76"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
@@ -134,9 +134,9 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-Oa-rhl">
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-Oa-rhl" userLabel="Quit">
                                 <rect key="frame" x="512" y="307" width="256" height="40"/>
-                                <shadow key="shadow">
+                                <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </shadow>
@@ -145,12 +145,12 @@
                                     <font key="font" metaFont="systemBold" size="22"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="buttonPressed:" target="XfG-lQ-9wD" id="P7A-9b-Jix"/>
+                                    <action selector="quitButton:" target="XfG-lQ-9wD" id="dnI-Ix-OIf"/>
                                 </connections>
                             </button>
-                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-27-YoH">
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-27-YoH" userLabel="Play">
                                 <rect key="frame" x="512" y="382" width="256" height="40"/>
-                                <shadow key="shadow">
+                                <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </shadow>
@@ -159,16 +159,13 @@
                                     <font key="font" metaFont="systemBold" size="22"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="zsH-BL-Tha" kind="show" id="2Jp-4I-AG0"/>
+                                    <segue destination="N18-dc-thx" kind="show" id="8rc-8L-qhp"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="bgMovie" destination="xCc-l8-eIL" id="YjM-FP-h6f"/>
-                        <outlet property="playButton" destination="Rjr-Oa-rhl" id="uBO-fb-9dU"/>
-                        <outlet property="player" destination="xCc-l8-eIL" id="T35-Hn-1tp"/>
-                        <outlet property="quitButton" destination="Rjr-Oa-rhl" id="8rA-X1-R5t"/>
+                        <outlet property="player" destination="xCc-l8-eIL" id="3FN-28-eum"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -176,17 +173,17 @@
             <point key="canvasLocation" x="75" y="853"/>
         </scene>
         <!--City Screen-->
-        <scene sceneID="9Nb-8A-tPc">
+        <scene sceneID="LDt-uh-XTO">
             <objects>
-                <viewController title="City Screen" id="zsH-BL-Tha" customClass="TitleScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="1l2-xn-hoo">
+                <viewController title="City Screen" id="N18-dc-thx" customClass="CityScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="XLZ-Hy-Urh">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="V2X-Ep-Gd6">
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="2iq-xe-fXc" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                                 <subviews>
-                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Zh-KRa">
+                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fqi-5Z-HhF">
                                         <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
                                     </avPlayerView>
                                 </subviews>
@@ -199,40 +196,99 @@
                                     </ciFilter>
                                 </contentFilters>
                             </visualEffectView>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2z-3C-yxP">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-4T-AkZ" userLabel="Location">
                                 <rect key="frame" x="29" y="660" width="1000" height="85"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </shadow>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="LOCATION" id="12I-V9-Ioz">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="LOCATION" id="dBU-sd-evl">
                                     <font key="font" size="71" name="UniSansHeavyCAPS"/>
                                     <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mf-kB-MZE">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-Co-Je2">
                                 <rect key="frame" x="29" y="745" width="133" height="26"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </shadow>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Welcome To" id="tUN-RE-erh">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Welcome To" id="Vbl-uO-3zW">
                                     <font key="font" size="22" name="UniSansHeavyCAPS"/>
                                     <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-dg-9WH">
+                                <rect key="frame" x="69" y="219" width="518" height="437"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAH-5C-Lg9">
+                                            <rect key="frame" x="12" y="377" width="490" height="30"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Store Location" drawsBackground="YES" id="6EA-eF-4Fz">
+                                                <font key="font" size="14" name="SourceCodePro-Light"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZd-Bn-0M1">
+                                            <rect key="frame" x="12" y="403" width="490" height="30"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Store Name" drawsBackground="YES" id="dyH-vL-jCn">
+                                                <font key="font" size="22" name="SourceCodePro-Medium"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-zn-xLZ" userLabel="Divider">
+                                            <rect key="frame" x="15" y="335" width="490" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RR9-DQ-ZxR">
+                                            <rect key="frame" x="12" y="350" width="490" height="45"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="PRICE LIST" drawsBackground="YES" id="4vJ-dh-0nO">
+                                                <font key="font" size="30" name="SourceCodePro-Semibold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="smallSystem"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Ke-Oke">
+                                <rect key="frame" x="687" y="219" width="518" height="437"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="smallSystem"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="bgMovie" destination="dsh-Zh-KRa" id="o4n-Ch-pZp"/>
-                        <outlet property="player" destination="dsh-Zh-KRa" id="KBH-i5-ywD"/>
+                        <outlet property="player" destination="Fqi-5Z-HhF" id="6bj-vZ-l5D"/>
                     </connections>
                 </viewController>
-                <customObject id="Gpm-VL-jOf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="SNb-pk-pJi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="853"/>
+            <point key="canvasLocation" x="1463" y="853"/>
         </scene>
     </scenes>
     <resources>
