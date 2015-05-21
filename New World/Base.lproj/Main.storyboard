@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.AVKitIBPlugin" version="7702"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -220,7 +220,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-dg-9WH">
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-dg-9WH" userLabel="Buy Screen">
                                 <rect key="frame" x="69" y="219" width="518" height="437"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
@@ -248,7 +248,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RR9-DQ-ZxR">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RR9-DQ-ZxR" userLabel="Price List">
                                             <rect key="frame" x="12" y="350" width="490" height="45"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="PRICE LIST" drawsBackground="YES" id="4vJ-dh-0nO">
                                                 <font key="font" size="30" name="SourceCodePro-Semibold"/>
@@ -264,7 +264,7 @@
                                 </shadow>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="titleFont" metaFont="smallSystem"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Ke-Oke">
                                 <rect key="frame" x="687" y="219" width="518" height="437"/>
@@ -278,7 +278,81 @@
                                 </shadow>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="titleFont" metaFont="smallSystem"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NTt-hu-yqF" userLabel="Paper">
+                                <rect key="frame" x="599" y="-26" width="46" height="176"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="176"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-wH-Che" userLabel="Paper">
+                                <rect key="frame" x="601" y="-28" width="46" height="176"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="176"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-kE-bnk" userLabel="New World Gazette">
+                                <rect key="frame" x="-16" y="-16" width="656" height="176"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="656" height="176"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-dt-ToM" userLabel="Divider">
+                                            <rect key="frame" x="14" y="135" width="630" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxw-ar-gK3" userLabel="Subtitle">
+                                            <rect key="frame" x="23" y="25" width="610" height="32"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Subtitle — &quot;Extra Text&quot;" drawsBackground="YES" id="To9-xi-nEH">
+                                                <font key="font" size="26" name="Times-Roman"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5V-Ar-3Bi" userLabel="Headline">
+                                            <rect key="frame" x="23" y="64" width="610" height="79"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="HEADLINE" drawsBackground="YES" id="pc6-fx-1Pp">
+                                                <font key="font" size="71" name="HeadlineOneHPLHS"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-MC-CM5" userLabel="New World Gazette">
+                                            <rect key="frame" x="78" y="144" width="500" height="25"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="NEW WORLD GAZETTE" drawsBackground="YES" id="56t-W1-waG">
+                                                <font key="font" size="33" name="Telegrafico"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                         </subviews>
                     </view>
