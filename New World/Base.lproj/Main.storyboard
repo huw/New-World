@@ -266,11 +266,35 @@
                                 <color key="fillColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
-                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Ke-Oke">
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Ke-Oke" userLabel="Sell Screen">
                                 <rect key="frame" x="687" y="219" width="518" height="437"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vO-GM-b18">
+                                            <rect key="frame" x="17" y="385" width="340" height="38"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Brown &amp; Reed Holdings" id="fnR-qh-ryz">
+                                                <font key="font" size="30" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-su-smY">
+                                            <rect key="frame" x="17" y="372" width="250" height="20"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Statement for P. Layer, Date" id="6CU-6d-Aha">
+                                                <font key="font" size="14" name="HelveticaNeue"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-ZZ-PIB" userLabel="Divider">
+                                            <rect key="frame" x="14" y="358" width="490" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                    </subviews>
                                 </view>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="-2"/>
