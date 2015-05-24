@@ -16,6 +16,6 @@ class CityScreenController: MoviewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.playVideo(player, fileName: "trainstation")
+        self.playVideo(player, fileName: "utopolis")
     }
 }

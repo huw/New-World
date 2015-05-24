@@ -16,7 +16,7 @@ class TitleScreenController: MoviewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.playVideo(player, fileName: "titlescreen")
+        self.playVideo(player, fileName: "hell")
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

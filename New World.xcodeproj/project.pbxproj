@@ -17,6 +17,14 @@
 		423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */; };
 		4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266060E1B0AB5190065C32B /* CityScreenController.swift */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
+		42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A31B0EE41800D7B841 /* utopolis.mp4 */; };
+		42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */; };
+		42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A51B0EE41800D7B841 /* ferngully.mp4 */; };
+		42CC50AE1B0EE41800D7B841 /* hell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A61B0EE41800D7B841 /* hell.mp4 */; };
+		42CC50AF1B0EE41800D7B841 /* lavamountain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A71B0EE41800D7B841 /* lavamountain.mp4 */; };
+		42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A81B0EE41800D7B841 /* newnewtown.mp4 */; };
+		42CC50B11B0EE41800D7B841 /* something.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A91B0EE41800D7B841 /* something.mp4 */; };
+		42CC50B21B0EE41800D7B841 /* trainstation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50AA1B0EE41800D7B841 /* trainstation.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,14 @@
 		423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_WorldTests.swift; sourceTree = "<group>"; };
 		4266060E1B0AB5190065C32B /* CityScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityScreenController.swift; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		42CC50A31B0EE41800D7B841 /* utopolis.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = utopolis.mp4; path = Timelapses/utopolis.mp4; sourceTree = "<group>"; };
+		42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bobsknuckle.mp4; path = Timelapses/bobsknuckle.mp4; sourceTree = "<group>"; };
+		42CC50A51B0EE41800D7B841 /* ferngully.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ferngully.mp4; path = Timelapses/ferngully.mp4; sourceTree = "<group>"; };
+		42CC50A61B0EE41800D7B841 /* hell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = hell.mp4; path = Timelapses/hell.mp4; sourceTree = "<group>"; };
+		42CC50A71B0EE41800D7B841 /* lavamountain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = lavamountain.mp4; path = Timelapses/lavamountain.mp4; sourceTree = "<group>"; };
+		42CC50A81B0EE41800D7B841 /* newnewtown.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = newnewtown.mp4; path = Timelapses/newnewtown.mp4; sourceTree = "<group>"; };
+		42CC50A91B0EE41800D7B841 /* something.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = something.mp4; path = Timelapses/something.mp4; sourceTree = "<group>"; };
+		42CC50AA1B0EE41800D7B841 /* trainstation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = trainstation.mp4; path = Timelapses/trainstation.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,14 @@
 			isa = PBXGroup;
 			children = (
 				4222B19C1B01B23500FCBA0F /* Button_BG.png */,
+				42CC50A31B0EE41800D7B841 /* utopolis.mp4 */,
+				42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */,
+				42CC50A51B0EE41800D7B841 /* ferngully.mp4 */,
+				42CC50A61B0EE41800D7B841 /* hell.mp4 */,
+				42CC50A71B0EE41800D7B841 /* lavamountain.mp4 */,
+				42CC50A81B0EE41800D7B841 /* newnewtown.mp4 */,
+				42CC50A91B0EE41800D7B841 /* something.mp4 */,
+				42CC50AA1B0EE41800D7B841 /* trainstation.mp4 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -203,9 +227,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CC50B11B0EE41800D7B841 /* something.mp4 in Resources */,
+				42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */,
+				42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */,
 				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
+				42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */,
 				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
+				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,
+				42CC50AE1B0EE41800D7B841 /* hell.mp4 in Resources */,
+				42CC50AF1B0EE41800D7B841 /* lavamountain.mp4 in Resources */,
 				4222B19D1B01B23500FCBA0F /* Button_BG.png in Resources */,
+				42CC50B21B0EE41800D7B841 /* trainstation.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
