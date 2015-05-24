@@ -17,6 +17,7 @@
 		423425ED1AF9C8DE00CF08DA /* New_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */; };
 		4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266060E1B0AB5190065C32B /* CityScreenController.swift */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
+		42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */; };
 		42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A31B0EE41800D7B841 /* utopolis.mp4 */; };
 		42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */; };
 		42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A51B0EE41800D7B841 /* ferngully.mp4 */; };
@@ -51,6 +52,7 @@
 		423425EC1AF9C8DE00CF08DA /* New_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_WorldTests.swift; sourceTree = "<group>"; };
 		4266060E1B0AB5190065C32B /* CityScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityScreenController.swift; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Large_BG.png; sourceTree = "<group>"; };
 		42CC50A31B0EE41800D7B841 /* utopolis.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = utopolis.mp4; path = Timelapses/utopolis.mp4; sourceTree = "<group>"; };
 		42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bobsknuckle.mp4; path = Timelapses/bobsknuckle.mp4; sourceTree = "<group>"; };
 		42CC50A51B0EE41800D7B841 /* ferngully.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ferngully.mp4; path = Timelapses/ferngully.mp4; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4222B19C1B01B23500FCBA0F /* Button_BG.png */,
+				42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */,
 				42CC50A31B0EE41800D7B841 /* utopolis.mp4 */,
 				42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */,
 				42CC50A51B0EE41800D7B841 /* ferngully.mp4 */,
@@ -231,6 +234,7 @@
 				42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */,
 				42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */,
 				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
+				42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */,
 				42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */,
 				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
 				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,

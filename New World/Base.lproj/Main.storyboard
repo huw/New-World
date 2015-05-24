@@ -177,11 +177,11 @@
             <objects>
                 <viewController title="City Screen" id="N18-dc-thx" customClass="CityScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="XLZ-Hy-Urh">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="2iq-xe-fXc" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                                <rect key="frame" x="0.0" y="-42" width="1280" height="800"/>
                                 <subviews>
                                     <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fqi-5Z-HhF">
                                         <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
@@ -197,7 +197,7 @@
                                 </contentFilters>
                             </visualEffectView>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-4T-AkZ" userLabel="Location">
-                                <rect key="frame" x="29" y="660" width="1000" height="85"/>
+                                <rect key="frame" x="29" y="618" width="1000" height="85"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,7 +209,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-Co-Je2">
-                                <rect key="frame" x="29" y="745" width="133" height="26"/>
+                                <rect key="frame" x="29" y="703" width="133" height="26"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,7 +221,7 @@
                                 </textFieldCell>
                             </textField>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-dg-9WH" userLabel="Buy Screen">
-                                <rect key="frame" x="69" y="219" width="518" height="437"/>
+                                <rect key="frame" x="69" y="183" width="518" height="437"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Ke-Oke" userLabel="Sell Screen">
-                                <rect key="frame" x="687" y="219" width="518" height="437"/>
+                                <rect key="frame" x="687" y="183" width="518" height="437"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="518" height="437"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +294,36 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-zO-enW">
+                                            <rect key="frame" x="14" y="10" width="340" height="47"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="$133.7 with me" id="CQ1-Ay-vqY">
+                                                <font key="font" size="39" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQu-aq-Xj6">
+                                            <rect key="frame" x="369" y="10" width="135" height="25"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="$22 owed" id="43k-Jl-8WZ">
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zjl-c9-CPp">
+                                            <rect key="frame" x="369" y="33" width="135" height="25"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="$0 in bank" id="5O0-bY-bYX">
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="50Z-XI-joW" userLabel="Divider">
+                                            <rect key="frame" x="14" y="61" width="490" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
                                     </subviews>
                                 </view>
                                 <shadow key="shadow" blurRadius="4">
@@ -305,7 +335,7 @@
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NTt-hu-yqF" userLabel="Paper">
-                                <rect key="frame" x="599" y="-26" width="46" height="176"/>
+                                <rect key="frame" x="599" y="-32" width="46" height="176"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="46" height="176"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +349,7 @@
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-wH-Che" userLabel="Paper">
-                                <rect key="frame" x="601" y="-28" width="46" height="176"/>
+                                <rect key="frame" x="601" y="-34" width="46" height="176"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="46" height="176"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,7 +363,7 @@
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-kE-bnk" userLabel="New World Gazette">
-                                <rect key="frame" x="-16" y="-16" width="656" height="176"/>
+                                <rect key="frame" x="-16" y="-22" width="656" height="176"/>
                                 <view key="contentView">
                                     <rect key="frame" x="0.0" y="0.0" width="656" height="176"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,6 +408,28 @@
                                 <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="titleFont" metaFont="system" size="11"/>
                             </box>
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzd-kP-vKu" userLabel="To Bank">
+                                <rect key="frame" x="687" y="25" width="237" height="120"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="TO THE BANK" bezelStyle="texturedSquare" image="Button_Large_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="6kV-Id-K7m">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="28"/>
+                                </buttonCell>
+                            </button>
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0v-es-gLn" userLabel="To Station">
+                                <rect key="frame" x="968" y="25" width="237" height="120"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="CATCH A TRAIN" bezelStyle="texturedSquare" image="Button_Large_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="4t2-nj-yme">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="28"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -391,5 +443,6 @@
     </scenes>
     <resources>
         <image name="Button_BG" width="256" height="43"/>
+        <image name="Button_Large_BG" width="237" height="120"/>
     </resources>
 </document>
