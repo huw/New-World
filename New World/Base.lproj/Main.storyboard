@@ -418,6 +418,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="28"/>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="Bug-5C-UUg" kind="modal" id="cY2-v8-htO"/>
+                                </connections>
                             </button>
                             <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0v-es-gLn" userLabel="To Station">
                                 <rect key="frame" x="968" y="25" width="237" height="120"/>
@@ -665,7 +668,7 @@
         <!--Bank-->
         <scene sceneID="i0v-nf-Tlz">
             <objects>
-                <viewController title="Bank" id="Bug-5C-UUg" userLabel="Bank" customClass="BankController" sceneMemberID="viewController">
+                <viewController title="Bank" id="Bug-5C-UUg" userLabel="Bank" customClass="BankController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="daJ-6n-Q5M">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -692,10 +695,197 @@
                                     </ciFilter>
                                 </contentFilters>
                             </visualEffectView>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11F-Xf-hi0" userLabel="Location">
+                                <rect key="frame" x="68" y="618" width="700" height="85"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="LOCATION" bezelStyle="texturedSquare" imagePosition="left" alignment="left" state="on" imageScaling="proportionallyDown" inset="2" id="5UJ-Nv-W0m">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="71" name="UniSansHeavyCAPS"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="backButton2:" target="Bug-5C-UUg" id="scC-gU-chG"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bI8-VD-qob" userLabel="Back Arrow">
+                                <rect key="frame" x="24" y="643" width="29" height="52"/>
+                                <shadow key="shadow">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Back_Arrow" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="MU5-RI-iy0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="backButton1:" target="Bug-5C-UUg" id="Sic-Fd-CPT"/>
+                                </connections>
+                            </button>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-ND-9H1">
+                                <rect key="frame" x="29" y="703" width="133" height="26"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Back To" id="TG6-SI-2gE">
+                                    <font key="font" size="22" name="UniSansHeavyCAPS"/>
+                                    <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderWidth="0.0" cornerRadius="2" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-cK-kOg" userLabel="Bank">
+                                <rect key="frame" x="50" y="17" width="1182" height="607"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="1182" height="607"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqs-Oy-hAv">
+                                            <rect key="frame" x="0.0" y="23" width="1182" height="607"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Bank_BG" id="1NK-Ad-LdA"/>
+                                        </imageView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-V9-jbv" userLabel="Rate">
+                                            <rect key="frame" x="34" y="425" width="500" height="52"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Interest Rate:" id="zTb-mI-Xp2">
+                                                <font key="font" size="48" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGB-UU-6AE" userLabel="Friendly">
+                                            <rect key="frame" x="34" y="382" width="500" height="34"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Friendly™ Loan Rate:" id="Gdn-og-TWq">
+                                                <font key="font" size="28" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-bg-Kgx" userLabel="Standard">
+                                            <rect key="frame" x="34" y="275" width="500" height="34"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Standard Loan Rate:" id="T75-Hm-XQq">
+                                                <font key="font" size="28" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJw-QG-GQj" userLabel="Super">
+                                            <rect key="frame" x="34" y="162" width="500" height="34"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Super Loan Rate:" id="jpQ-vZ-Azi">
+                                                <font key="font" size="28" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykL-Sr-7gi" userLabel="Borrow Amount">
+                                            <rect key="frame" x="668" y="400" width="491" height="68"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="$ Borrow Amount" id="Alw-a7-TOS">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="xbg-pQ-Fib"/>
+                                                <font key="font" size="55" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="5IB-aZ-n6D" userLabel="Line">
+                                            <rect key="frame" x="668" y="400" width="487" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-OE-Lx7" userLabel="Friendly (Button)">
+                                            <rect key="frame" x="668" y="340" width="137" height="48"/>
+                                            <shadow key="shadow" blurRadius="4">
+                                                <size key="offset" width="0.0" height="2"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="FRIENDLY" bezelStyle="texturedSquare" image="Button_Thin" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="udA-ae-uhs">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELM-rU-ybd" userLabel="Standard (Button)">
+                                            <rect key="frame" x="844" y="340" width="137" height="48"/>
+                                            <shadow key="shadow" blurRadius="4">
+                                                <size key="offset" width="0.0" height="2"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="STANDARD" bezelStyle="texturedSquare" image="Button_Thin" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="0TC-bR-CP4">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-cG-Jd3" userLabel="Super (Button)">
+                                            <rect key="frame" x="1018" y="340" width="137" height="48"/>
+                                            <shadow key="shadow" blurRadius="4">
+                                                <size key="offset" width="0.0" height="2"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="SUPER" bezelStyle="texturedSquare" image="Button_Thin" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="6Yv-R2-TK6">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-Bp-hRj" userLabel="Deposit Amount">
+                                            <rect key="frame" x="668" y="200" width="491" height="68"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="$ Amount" id="NY8-nT-23M">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0mO-MM-ge7"/>
+                                                <font key="font" size="55" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="KTb-it-vfa" userLabel="Line">
+                                            <rect key="frame" x="668" y="200" width="487" height="5"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lug-FM-vsb" userLabel="Withdraw">
+                                            <rect key="frame" x="927" y="140" width="228" height="48"/>
+                                            <shadow key="shadow" blurRadius="4">
+                                                <size key="offset" width="0.0" height="2"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="WITHDRAW" bezelStyle="texturedSquare" image="Button_Wide" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="IJt-ZC-G76">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdQ-eK-jwP" userLabel="Deposit">
+                                            <rect key="frame" x="668" y="140" width="228" height="48"/>
+                                            <shadow key="shadow" blurRadius="4">
+                                                <size key="offset" width="0.0" height="2"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="DEPOSIT" bezelStyle="texturedSquare" image="Button_Wide" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="KiG-I6-2qI">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="20" name="HelveticaNeue-Bold"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-Ye-bYC" userLabel="Balance">
+                                            <rect key="frame" x="460" y="24" width="700" height="68"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Interest Rate:" id="G4I-XU-p3L">
+                                                <font key="font" size="55" name="HelveticaNeue-Thin"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="player" destination="Tbt-rE-Bds" id="83d-de-Jcj"/>
+                        <outlet property="backButton1" destination="bI8-VD-qob" id="mLO-4T-wMM"/>
+                        <outlet property="locationLabel" destination="11F-Xf-hi0" id="fSI-pc-OEm"/>
+                        <outlet property="player" destination="Tbt-rE-Bds" id="6U9-sv-p3y"/>
                     </connections>
                 </viewController>
                 <customObject id="RTT-oj-tUw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -705,9 +895,12 @@
     </scenes>
     <resources>
         <image name="Back_Arrow" width="29" height="53"/>
+        <image name="Bank_BG" width="1182" height="560"/>
         <image name="Blip" width="32" height="32"/>
         <image name="Button_BG" width="256" height="43"/>
         <image name="Button_Large_BG" width="237" height="120"/>
+        <image name="Button_Thin" width="137" height="48"/>
+        <image name="Button_Wide" width="228" height="48"/>
         <image name="Ticket" width="396" height="61"/>
         <image name="Ticket_Button" width="403" height="71"/>
         <image name="Train_Map" width="960" height="633"/>
