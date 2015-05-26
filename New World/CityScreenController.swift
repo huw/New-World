@@ -18,4 +18,8 @@ class CityScreenController: MoviewController {
         
         self.playVideo(player, fileName: "bobsknuckle")
     }
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        player.player.pause()
+    }
 }

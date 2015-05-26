@@ -12,6 +12,7 @@ import AVKit
 class TitleScreenController: MoviewController {
 
     @IBOutlet weak var player: AVPlayerView!
+    var parentVC: AnyObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()

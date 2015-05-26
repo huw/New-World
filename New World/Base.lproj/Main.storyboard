@@ -159,7 +159,7 @@
                                     <font key="font" metaFont="systemBold" size="22"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="N18-dc-thx" kind="show" id="8rc-8L-qhp"/>
+                                    <segue destination="N18-dc-thx" kind="modal" id="8rc-8L-qhp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -429,6 +429,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="28"/>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="p40-xK-G0R" kind="modal" id="Enb-Jw-eRO"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -440,9 +443,273 @@
             </objects>
             <point key="canvasLocation" x="1463" y="853"/>
         </scene>
+        <!--Train Station-->
+        <scene sceneID="hjj-Zl-EF0">
+            <objects>
+                <viewController title="Train Station" id="p40-xK-G0R" userLabel="Train Station" customClass="TrainStationController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="FVc-2c-3WL">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="oeF-1L-0Uy" userLabel="Background">
+                                <rect key="frame" x="0.0" y="-42" width="1280" height="800"/>
+                                <subviews>
+                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="73F-8n-WIY">
+                                        <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
+                                    </avPlayerView>
+                                </subviews>
+                                <contentFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                    <ciFilter name="CIExposureAdjust">
+                                        <configuration>
+                                            <real key="inputEV" value="-1.5"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                            </visualEffectView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p98-Cy-6rS" userLabel="Map">
+                                <rect key="frame" x="24" y="42" width="960" height="633"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Train_Map" id="50q-Ee-WtC"/>
+                            </imageView>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ag9-VA-cXy">
+                                <rect key="frame" x="29" y="703" width="133" height="26"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Back To" id="HNJ-vV-wYT">
+                                    <font key="font" size="22" name="UniSansHeavyCAPS"/>
+                                    <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-iL-psw" userLabel="Location">
+                                <rect key="frame" x="68" y="618" width="700" height="85"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="LOCATION" bezelStyle="texturedSquare" imagePosition="left" alignment="left" state="on" imageScaling="proportionallyDown" inset="2" id="TCP-Vw-IpH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="71" name="UniSansHeavyCAPS"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="backButton2:" target="p40-xK-G0R" id="2Pl-pD-cZl"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heU-Z6-8UH" userLabel="Back Arrow">
+                                <rect key="frame" x="24" y="643" width="29" height="52"/>
+                                <shadow key="shadow">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Back_Arrow" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="eDc-Pg-Wpb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="backButton1:" target="p40-xK-G0R" id="H9g-JC-nHN"/>
+                                </connections>
+                            </button>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" cornerRadius="14" title="Box" boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="2p1-oW-oQP">
+                                <rect key="frame" x="860" y="8" width="395" height="202"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="395" height="202"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faj-SX-etP" userLabel="Decals">
+                                            <rect key="frame" x="0.0" y="130" width="396" height="85"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Ticket" id="ggi-Cr-qKI"/>
+                                        </imageView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afa-cH-FdJ" userLabel="Location">
+                                            <rect key="frame" x="11" y="67" width="370" height="100"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="LOCATION" id="X2E-2M-ip0">
+                                                <font key="font" size="70" name="SourceCodePro-Black"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXh-FG-Jh1" userLabel="Depart">
+                                            <rect key="frame" x="-8" y="-19" width="410" height="100"/>
+                                            <buttonCell key="cell" type="squareTextured" title="DEPART" bezelStyle="texturedSquare" image="Ticket_Button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="sh9-zz-il8">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="systemBold" size="24"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="-2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                <font key="titleFont" metaFont="system" size="11"/>
+                            </box>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-4t-8zr" userLabel="Blip">
+                                <rect key="frame" x="178" y="464" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ySI-iZ-tjl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pu-Hd-677" userLabel="Blip">
+                                <rect key="frame" x="110" y="536" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="oJn-OT-tBd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ns-wH-0xj" userLabel="Blip">
+                                <rect key="frame" x="414" y="302" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="tJV-Dc-5Ea">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNK-WF-J4n" userLabel="Blip">
+                                <rect key="frame" x="499" y="384" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="DdK-Ec-Rko">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-rf-fBt" userLabel="Blip">
+                                <rect key="frame" x="653" y="643" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="U0n-Nr-Lle">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDQ-DZ-1eg" userLabel="Blip">
+                                <rect key="frame" x="653" y="536" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="2DB-fK-Bff">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zlq-sd-YpK" userLabel="Blip">
+                                <rect key="frame" x="802" y="384" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="xn1-74-DV4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0y-iK-OZI" userLabel="Blip">
+                                <rect key="frame" x="759" y="214" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="16t-Xa-TFh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhR-Ml-iuH" userLabel="Blip">
+                                <rect key="frame" x="759" y="41" width="31" height="31"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Blip" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="wNQ-q1-MWA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="TCP-Vw-IpH" id="VKc-mh-Uic"/>
+                        <outlet property="player" destination="73F-8n-WIY" id="Fdv-y7-MTQ"/>
+                    </connections>
+                </viewController>
+                <customObject id="YCS-si-abO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="853"/>
+        </scene>
+        <!--Bank-->
+        <scene sceneID="i0v-nf-Tlz">
+            <objects>
+                <viewController title="Bank" id="Bug-5C-UUg" userLabel="Bank" customClass="BankController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="daJ-6n-Q5M">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="MLa-XO-Vyh" userLabel="Background">
+                                <rect key="frame" x="0.0" y="-42" width="1280" height="800"/>
+                                <subviews>
+                                    <avPlayerView wantsLayer="YES" fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tbt-rE-Bds">
+                                        <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
+                                    </avPlayerView>
+                                </subviews>
+                                <contentFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                    <ciFilter name="CIExposureAdjust">
+                                        <configuration>
+                                            <real key="inputEV" value="-1.5"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="player" destination="Tbt-rE-Bds" id="83d-de-Jcj"/>
+                    </connections>
+                </viewController>
+                <customObject id="RTT-oj-tUw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="1731"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Back_Arrow" width="29" height="53"/>
+        <image name="Blip" width="32" height="32"/>
         <image name="Button_BG" width="256" height="43"/>
         <image name="Button_Large_BG" width="237" height="120"/>
+        <image name="Ticket" width="396" height="61"/>
+        <image name="Ticket_Button" width="403" height="71"/>
+        <image name="Train_Map" width="960" height="633"/>
     </resources>
 </document>

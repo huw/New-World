@@ -10,6 +10,10 @@
 		4222B1971B018C2900FCBA0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4222B1961B018C2900FCBA0F /* QuartzCore.framework */; };
 		4222B19B1B01A65F00FCBA0F /* TitleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4222B19A1B01A65F00FCBA0F /* TitleScreenController.swift */; };
 		4222B19D1B01B23500FCBA0F /* Button_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4222B19C1B01B23500FCBA0F /* Button_BG.png */; };
+		4223F7891B13FDD000DD8A8B /* Blip_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223F7881B13FDD000DD8A8B /* Blip_Active.png */; };
+		4223F78B1B13FDDD00DD8A8B /* Blip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223F78A1B13FDDD00DD8A8B /* Blip.png */; };
+		4223F78D1B13FE1D00DD8A8B /* Blip_Current.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223F78C1B13FE1D00DD8A8B /* Blip_Current.png */; };
+		422733861B13246A00533025 /* Ticket_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 422733851B13246A00533025 /* Ticket_Button.png */; };
 		423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425D91AF9C8DA00CF08DA /* AppDelegate.swift */; };
 		423425DC1AF9C8DA00CF08DA /* MoviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423425DB1AF9C8DA00CF08DA /* MoviewController.swift */; };
 		423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423425DD1AF9C8DB00CF08DA /* Images.xcassets */; };
@@ -18,6 +22,10 @@
 		4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266060E1B0AB5190065C32B /* CityScreenController.swift */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
 		42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */; };
+		42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */; };
+		42B43C721B11BCEF001EA9E4 /* Train_Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C711B11BCEF001EA9E4 /* Train_Map.png */; };
+		42B43C751B11BE89001EA9E4 /* TrainStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B43C731B11BE89001EA9E4 /* TrainStationController.swift */; };
+		42BE94BF1B13264F007076A0 /* Ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BE94BE1B13264F007076A0 /* Ticket.png */; };
 		42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A31B0EE41800D7B841 /* utopolis.mp4 */; };
 		42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */; };
 		42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A51B0EE41800D7B841 /* ferngully.mp4 */; };
@@ -42,6 +50,10 @@
 		4222B1961B018C2900FCBA0F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4222B19A1B01A65F00FCBA0F /* TitleScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreenController.swift; sourceTree = "<group>"; };
 		4222B19C1B01B23500FCBA0F /* Button_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_BG.png; sourceTree = "<group>"; };
+		4223F7881B13FDD000DD8A8B /* Blip_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blip_Active.png; sourceTree = "<group>"; };
+		4223F78A1B13FDDD00DD8A8B /* Blip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blip.png; sourceTree = "<group>"; };
+		4223F78C1B13FE1D00DD8A8B /* Blip_Current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blip_Current.png; sourceTree = "<group>"; };
+		422733851B13246A00533025 /* Ticket_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ticket_Button.png; sourceTree = "<group>"; };
 		423425D41AF9C8D800CF08DA /* New World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423425D91AF9C8DA00CF08DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423425DB1AF9C8DA00CF08DA /* MoviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewController.swift; sourceTree = "<group>"; };
@@ -53,6 +65,10 @@
 		4266060E1B0AB5190065C32B /* CityScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityScreenController.swift; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Large_BG.png; sourceTree = "<group>"; };
+		42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_Arrow.png; sourceTree = "<group>"; };
+		42B43C711B11BCEF001EA9E4 /* Train_Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Train_Map.png; sourceTree = "<group>"; };
+		42B43C731B11BE89001EA9E4 /* TrainStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationController.swift; sourceTree = "<group>"; };
+		42BE94BE1B13264F007076A0 /* Ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ticket.png; sourceTree = "<group>"; };
 		42CC50A31B0EE41800D7B841 /* utopolis.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = utopolis.mp4; path = Timelapses/utopolis.mp4; sourceTree = "<group>"; };
 		42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bobsknuckle.mp4; path = Timelapses/bobsknuckle.mp4; sourceTree = "<group>"; };
 		42CC50A51B0EE41800D7B841 /* ferngully.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ferngully.mp4; path = Timelapses/ferngully.mp4; sourceTree = "<group>"; };
@@ -108,6 +124,7 @@
 				423425DB1AF9C8DA00CF08DA /* MoviewController.swift */,
 				423425DD1AF9C8DB00CF08DA /* Images.xcassets */,
 				423425DF1AF9C8DC00CF08DA /* Main.storyboard */,
+				42B43C731B11BE89001EA9E4 /* TrainStationController.swift */,
 				4266060E1B0AB5190065C32B /* CityScreenController.swift */,
 				4222B19A1B01A65F00FCBA0F /* TitleScreenController.swift */,
 				428EE90E1B005C0B0003FB7C /* MainWindowController.swift */,
@@ -121,6 +138,13 @@
 			children = (
 				4222B19C1B01B23500FCBA0F /* Button_BG.png */,
 				42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */,
+				42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */,
+				42B43C711B11BCEF001EA9E4 /* Train_Map.png */,
+				42BE94BE1B13264F007076A0 /* Ticket.png */,
+				422733851B13246A00533025 /* Ticket_Button.png */,
+				4223F78A1B13FDDD00DD8A8B /* Blip.png */,
+				4223F7881B13FDD000DD8A8B /* Blip_Active.png */,
+				4223F78C1B13FE1D00DD8A8B /* Blip_Current.png */,
 				42CC50A31B0EE41800D7B841 /* utopolis.mp4 */,
 				42CC50A41B0EE41800D7B841 /* bobsknuckle.mp4 */,
 				42CC50A51B0EE41800D7B841 /* ferngully.mp4 */,
@@ -230,12 +254,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4223F78B1B13FDDD00DD8A8B /* Blip.png in Resources */,
 				42CC50B11B0EE41800D7B841 /* something.mp4 in Resources */,
+				42BE94BF1B13264F007076A0 /* Ticket.png in Resources */,
 				42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */,
 				42CC50AD1B0EE41800D7B841 /* ferngully.mp4 in Resources */,
+				422733861B13246A00533025 /* Ticket_Button.png in Resources */,
 				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
 				42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */,
+				4223F7891B13FDD000DD8A8B /* Blip_Active.png in Resources */,
+				4223F78D1B13FE1D00DD8A8B /* Blip_Current.png in Resources */,
+				42B43C721B11BCEF001EA9E4 /* Train_Map.png in Resources */,
 				42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */,
+				42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */,
 				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
 				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,
 				42CC50AE1B0EE41800D7B841 /* hell.mp4 in Resources */,
@@ -260,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4222B19B1B01A65F00FCBA0F /* TitleScreenController.swift in Sources */,
+				42B43C751B11BE89001EA9E4 /* TrainStationController.swift in Sources */,
 				423425DC1AF9C8DA00CF08DA /* MoviewController.swift in Sources */,
 				4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */,
 				423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */,
