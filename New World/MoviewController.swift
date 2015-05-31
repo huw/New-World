@@ -15,6 +15,9 @@ class MoviewController: NSViewController {
     var bgMovie: AVPlayerView = AVPlayerView()
     var fileName = "titlescreen"
     
+    // Load the JSON file containing the data on locations and stores
+    var stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+    
     override func viewDidDisappear() {
         super.viewDidDisappear()
         

@@ -14,6 +14,8 @@ class BankController: MoviewController {
     @IBOutlet weak var player: AVPlayerView!
     @IBOutlet weak var locationLabel: NSButton!
     
+    var locationName: String = "Location"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,16 +33,13 @@ class BankController: MoviewController {
                 )!
         ]
         
+        var location = self.stores[locationName]["name"].string!
         locationLabel.attributedTitle = NSAttributedString(
-            string: "LOCATION",
+            string: location,
             attributes: attrs
         )
         
         self.playVideo(player, fileName: "utopolis")
-    }
-    
-    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        player.player.pause()
     }
     
     @IBAction func backButton1(sender: AnyObject) {

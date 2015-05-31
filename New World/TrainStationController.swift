@@ -15,6 +15,18 @@ class TrainStationController: MoviewController {
     @IBOutlet weak var player: AVPlayerView!
     @IBOutlet weak var locationLabel: NSButtonCell!
     
+    @IBOutlet weak var treetopgullyButton: NSButton!
+    @IBOutlet weak var steamershillButton: NSButton!
+    @IBOutlet weak var newnewtownButton: NSButton!
+    @IBOutlet weak var utopolisButton: NSButton!
+    @IBOutlet weak var brokencreekButton: NSButton!
+    @IBOutlet weak var lavamountainButton: NSButton!
+    @IBOutlet weak var somethingButton: NSButton!
+    @IBOutlet weak var bobsknuckleButton: NSButton!
+    @IBOutlet weak var hellButton: NSButton!
+    
+    var locationName: String = "Location"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,17 +43,52 @@ class TrainStationController: MoviewController {
                 size: 71
             )!
         ]
-        
+
+        var location = self.stores[locationName]["name"].string!
         locationLabel.attributedTitle = NSAttributedString(
-            string: "LOCATION",
+            string: location,
             attributes: attrs
         )
         
         self.playVideo(player, fileName: "trainstation")
+        
+        switch locationName {
+        case "treetopgully":
+            steamershillButton.enabled = true
+            newnewtownButton.enabled = true
+            hellButton.enabled = true
+        case "steamershill":
+            treetopgullyButton.enabled = true
+            brokencreekButton.enabled = true
+        case "newnewtown":
+            treetopgullyButton.enabled = true
+            utopolisButton.enabled = true
+        case "utopolis":
+            newnewtownButton.enabled = true
+            bobsknuckleButton.enabled = true
+            somethingButton.enabled = true
+            brokencreekButton.enabled = true
+        case "brokencreek":
+            steamershillButton.enabled = true
+            lavamountainButton.enabled = true
+            utopolisButton.enabled = true
+            somethingButton.enabled = true
+        case "lavamountain":
+            brokencreekButton.enabled = true
+        case "bobsknuckle":
+            utopolisButton.enabled = true
+            somethingButton.enabled = true
+            hellButton.enabled = true
+        case "hell":
+            treetopgullyButton.enabled = true
+            bobsknuckleButton.enabled = true
+        default:
+            true
+        }
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        player.player.pause()
+        self.dismissController(nil)
     }
     
     @IBAction func backButton1(sender: AnyObject) {
