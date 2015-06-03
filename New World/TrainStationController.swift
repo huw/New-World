@@ -14,6 +14,8 @@ class TrainStationController: MoviewController {
 
     @IBOutlet weak var player: AVPlayerView!
     @IBOutlet weak var locationLabel: NSButtonCell!
+    @IBOutlet weak var destinationLabel: NSTextField!
+    @IBOutlet weak var departButton: NSButton!
     
     @IBOutlet weak var treetopgullyButton: NSButton!
     @IBOutlet weak var steamershillButton: NSButton!
@@ -26,6 +28,7 @@ class TrainStationController: MoviewController {
     @IBOutlet weak var hellButton: NSButton!
     
     var locationName: String = "Location"
+    var destination: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,13 +71,17 @@ class TrainStationController: MoviewController {
             bobsknuckleButton.enabled = true
             somethingButton.enabled = true
             brokencreekButton.enabled = true
+        case "lavamountain":
+            brokencreekButton.enabled = true
         case "brokencreek":
             steamershillButton.enabled = true
             lavamountainButton.enabled = true
             utopolisButton.enabled = true
             somethingButton.enabled = true
-        case "lavamountain":
+        case "something":
+            bobsknuckleButton.enabled = true
             brokencreekButton.enabled = true
+            utopolisButton.enabled = true
         case "bobsknuckle":
             utopolisButton.enabled = true
             somethingButton.enabled = true
@@ -88,7 +95,12 @@ class TrainStationController: MoviewController {
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        self.dismissController(nil)
+        player.player.pause()
+        let next = segue.destinationController as! CityScreenController
+        next.dismissController(nil)
+        next.stores = self.stores
+        next.user = self.user
+        next.locationName = self.destination
     }
     
     @IBAction func backButton1(sender: AnyObject) {
@@ -97,5 +109,42 @@ class TrainStationController: MoviewController {
     
     @IBAction func backButton2(sender: AnyObject) {
         self.dismissController(nil)
+    }
+    
+    @IBAction func treetopgullyClick(sender: AnyObject) {
+        setDest("treetopgully")
+    }
+    @IBAction func steamershillClick(sender: AnyObject) {
+        setDest("steamershill")
+    }
+    @IBAction func newnewtownClick(sender: AnyObject) {
+        setDest("newnewtown")
+    }
+    @IBAction func utopolisClick(sender: AnyObject) {
+        setDest("utopolis")
+    }
+    @IBAction func lavamountainClick(sender: AnyObject) {
+        setDest("lavamountain")
+    }
+    @IBAction func brokencreekClick(sender: AnyObject) {
+        setDest("brokencreek")
+    }
+    @IBAction func somethingClick(sender: AnyObject) {
+        setDest("something")
+    }
+    @IBAction func bobsknuckleClick(sender: AnyObject) {
+        setDest("bobsknuckle")
+    }
+    @IBAction func hellClick(sender: AnyObject) {
+        setDest("hell")
+    }
+    
+    func setDest(destination: String) {
+        self.destination = destination
+        destinationLabel.stringValue = self.stores[destination]["name"].stringValue.capitalizedString
+        
+        if departButton.enabled == false {
+            departButton.enabled = true
+        }
     }
 }

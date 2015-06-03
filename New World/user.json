@@ -1,0 +1,16 @@
+{
+  "balance": 100,
+  "bankbalance": 0,
+  "loans": {
+    "friendly": 0,
+    "standard": 0,
+    "super": 0
+  },
+  "inventory": [
+    {
+      "name": "Problems",
+      "quantity": 99,
+      "price": 0.01
+    }
+  ]
+}

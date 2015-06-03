@@ -15,6 +15,7 @@ class BankController: MoviewController {
     @IBOutlet weak var locationLabel: NSButton!
     
     var locationName: String = "Location"
+    var previous: CityScreenController = CityScreenController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +42,14 @@ class BankController: MoviewController {
         
         self.playVideo(player, fileName: "utopolis")
     }
-    
+
     @IBAction func backButton1(sender: AnyObject) {
+        self.previous.user = self.user
         self.dismissController(nil)
     }
     
     @IBAction func backButton2(sender: AnyObject) {
+        self.previous.user = self.user
         self.dismissController(nil)
     }
     

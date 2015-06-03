@@ -17,10 +17,16 @@ class TitleScreenController: MoviewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.playVideo(player, fileName: "hell")
+        self.stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        self.user = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        
+        self.playVideo(player, fileName: "titlescreen")
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        let next = segue.destinationController as! MoviewController
+        next.stores = self.stores
+        next.user = self.user
         player.player.pause()
     }
     

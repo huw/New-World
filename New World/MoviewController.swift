@@ -13,10 +13,11 @@ import AVKit
 class MoviewController: NSViewController {
     
     var bgMovie: AVPlayerView = AVPlayerView()
-    var fileName = "titlescreen"
+    var fileName: String = "titlescreen"
     
     // Load the JSON file containing the data on locations and stores
-    var stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+    var stores: JSON = []
+    var user: JSON = []
     
     override func viewDidDisappear() {
         super.viewDidDisappear()

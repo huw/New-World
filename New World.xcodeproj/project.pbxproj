@@ -29,6 +29,7 @@
 		426DEC7D1B148B2600AC8E94 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 426DEC7C1B148B2600AC8E94 /* stores.json */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
 		42A075F81B1466EC00B4131C /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A075F71B1466EC00B4131C /* EventController.swift */; };
+		42B2D36C1B1D2D4B00B079C1 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 42B2D36B1B1D2D4B00B079C1 /* user.json */; };
 		42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */; };
 		42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */; };
 		42B43C721B11BCEF001EA9E4 /* Train_Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C711B11BCEF001EA9E4 /* Train_Map.png */; };
@@ -44,6 +45,10 @@
 		42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A81B0EE41800D7B841 /* newnewtown.mp4 */; };
 		42CC50B11B0EE41800D7B841 /* something.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50A91B0EE41800D7B841 /* something.mp4 */; };
 		42CC50B21B0EE41800D7B841 /* trainstation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42CC50AA1B0EE41800D7B841 /* trainstation.mp4 */; };
+		42FC636D1B1C1184006EDD92 /* bank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 428E352F1B1AF18900F9AB68 /* bank.mp4 */; };
+		42FC636E1B1C1184006EDD92 /* brokencreek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 428E35301B1AF18900F9AB68 /* brokencreek.mp4 */; };
+		42FC636F1B1C1184006EDD92 /* steamershill.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 428E35311B1AF18900F9AB68 /* steamershill.mp4 */; };
+		42FC63701B1C1184006EDD92 /* titlescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 428E35321B1AF18900F9AB68 /* titlescreen.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,7 @@
 		428E35321B1AF18900F9AB68 /* titlescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = titlescreen.mp4; path = Timelapses/titlescreen.mp4; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		42A075F71B1466EC00B4131C /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		42B2D36B1B1D2D4B00B079C1 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Large_BG.png; sourceTree = "<group>"; };
 		42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_Arrow.png; sourceTree = "<group>"; };
 		42B43C711B11BCEF001EA9E4 /* Train_Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Train_Map.png; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 				428E35301B1AF18900F9AB68 /* brokencreek.mp4 */,
 				428E35311B1AF18900F9AB68 /* steamershill.mp4 */,
 				428E35321B1AF18900F9AB68 /* titlescreen.mp4 */,
+				42B2D36B1B1D2D4B00B079C1 /* user.json */,
 				426DEC7C1B148B2600AC8E94 /* stores.json */,
 			);
 			name = "Supporting Files";
@@ -299,15 +306,19 @@
 				42BE94BF1B13264F007076A0 /* Ticket.png in Resources */,
 				42CC50B01B0EE41800D7B841 /* newnewtown.mp4 in Resources */,
 				42CC50AD1B0EE41800D7B841 /* treetopgully.mp4 in Resources */,
+				42B2D36C1B1D2D4B00B079C1 /* user.json in Resources */,
+				42FC636D1B1C1184006EDD92 /* bank.mp4 in Resources */,
 				422733861B13246A00533025 /* Ticket_Button.png in Resources */,
 				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
 				4208015E1B14120100397EE4 /* Button_Event.png in Resources */,
 				42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */,
 				4223F7891B13FDD000DD8A8B /* Blip_Active.png in Resources */,
 				4223F78D1B13FE1D00DD8A8B /* Blip_Current.png in Resources */,
+				42FC63701B1C1184006EDD92 /* titlescreen.mp4 in Resources */,
 				42C627241B14073B0012E5A3 /* Button_Wide.png in Resources */,
 				4223F7931B14037E00DD8A8B /* Bank_BG.png in Resources */,
 				42B43C721B11BCEF001EA9E4 /* Train_Map.png in Resources */,
+				42FC636E1B1C1184006EDD92 /* brokencreek.mp4 in Resources */,
 				42CC50AC1B0EE41800D7B841 /* bobsknuckle.mp4 in Resources */,
 				42C627221B1407340012E5A3 /* Button_Thin.png in Resources */,
 				42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */,
@@ -315,6 +326,7 @@
 				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,
 				42CC50AE1B0EE41800D7B841 /* hell.mp4 in Resources */,
 				42CC50AF1B0EE41800D7B841 /* lavamountain.mp4 in Resources */,
+				42FC636F1B1C1184006EDD92 /* steamershill.mp4 in Resources */,
 				4222B19D1B01B23500FCBA0F /* Button_BG.png in Resources */,
 				42CC50B21B0EE41800D7B841 /* trainstation.mp4 in Resources */,
 				426DEC7D1B148B2600AC8E94 /* stores.json in Resources */,
