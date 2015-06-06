@@ -21,8 +21,9 @@ class CityScreenController: MoviewController {
     @IBOutlet weak var cashInLoans: NSTextField!
     @IBOutlet weak var cashInBank: NSTextField!
     
-    var storeInventory: JSON = []
     var locationName: String = "steamershill"
+    var buyValues = [Int]()
+    var sellValues = [Int]()
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -52,7 +53,7 @@ class CityScreenController: MoviewController {
         // Play the video for this location
         self.playVideo(player, fileName: locationName)
         
-        self.storeInventory = self.stores[locationName]["inventory"]
+        reloadArrays()
         
         // Set the table view's delegate and data source
         tableView.setDataSource(self)
@@ -74,12 +75,108 @@ class CityScreenController: MoviewController {
         cashInLoans.stringValue = String(stringInterpolationSegment: loanBalance) + " owed"
     }
     
+    func reloadArrays() {
+        for i in self.stores[locationName]["inventory"] {
+            buyValues.append(0)
+        }
+        for i in self.user["inventory"] {
+            sellValues.append(0)
+        }
+    }
+    
     @IBAction func addItem(sender: AnyObject) {
         let row = tableView.rowForView(sender.superview!!)
+        let itemData = self.stores[self.locationName]["inventory"][row]
+        
+        // Only if there's enough stock to sell to the user
+        if itemData["quantity"].int! >= buyValues[row] && buyValues[row] > 0 {
+            
+            var prev = -1
+            var inventory = self.user["inventory"].array!
+            
+            for (i, item) in enumerate(inventory) {
+                if item["name"].string! == itemData["name"].string! {
+                    prev = i
+                }
+            }
+            
+            if prev == -1 {
+                // Build the new item into JSON, and then append it to the inventory array
+                var newItem = JSON(["name": itemData["name"].string!, "quantity": buyValues[row], "price": itemData["price"].double!])
+                inventory.append(newItem)
+                self.user["inventory"] = JSON(inventory)
+                
+                reloadArrays()
+            } else {
+                let quantity = self.user["inventory"][prev]["quantity"].intValue
+                self.user["inventory"][prev]["quantity"] = JSON(quantity + buyValues[row])
+            }
+            
+            // Remove the item from inventory
+            // Even if the item is at zero, we're still going to display it because stores always stock the same items upon successful revisits
+            let quantity = self.stores[self.locationName]["inventory"][row]["quantity"].intValue
+            self.stores[self.locationName]["inventory"][row]["quantity"] = JSON(quantity - buyValues[row])
+            
+            tableView.reloadData()
+            sellTableView.reloadData()
+        }
+
+    }
+    
+    @IBAction func buyChanged(sender: AnyObject) {
+        if let button = sender.superview! {
+            let row = tableView.rowForView(button)
+            if row != -1 {
+                buyValues[row] = sender.integerValue!
+            }
+        }
     }
     
     @IBAction func removeItem(sender: AnyObject) {
-        let row = tableView.rowForView(sender.superview!!)
+        let row = sellTableView.rowForView(sender.superview!!)
+        let itemData = self.user["inventory"][row]
+        
+        // Only if there's enough stock to sell to the user
+        if itemData["quantity"].int! >= sellValues[row] && sellValues[row] > 0 {
+            
+            var prev = -1
+            var inventory = self.stores[self.locationName]["inventory"].array!
+            
+            for (i, item) in enumerate(inventory) {
+                if item["name"].string! == itemData["name"].string! {
+                    prev = i
+                }
+            }
+            
+            if prev == -1 {
+                // Build the new item into JSON, and then append it to the inventory array
+                var newItem = JSON(["name": itemData["name"].string!, "quantity": sellValues[row], "price": itemData["price"].double!])
+                inventory.append(newItem)
+                self.stores[self.locationName]["inventory"] = JSON(inventory)
+                
+                reloadArrays()
+            } else {
+                let quantity = self.stores[self.locationName]["inventory"][prev]["quantity"].intValue
+                self.stores[self.locationName]["inventory"][prev]["quantity"] = JSON(quantity + sellValues[row])
+            }
+            
+            // Remove the item from inventory
+            // Even if the item is at zero, we're still going to display it because stores always stock the same items upon successful revisits
+            let quantity = self.user["inventory"][row]["quantity"].intValue
+            self.user["inventory"][row]["quantity"] = JSON(quantity - sellValues[row])
+            
+            tableView.reloadData()
+            sellTableView.reloadData()
+        }
+    }
+    
+    @IBAction func sellChanged(sender: AnyObject) {
+        if let field = sender.superview! {
+            let row = sellTableView.rowForView(field)
+            if row != -1 {
+                sellValues[row] = sender.integerValue!
+            }
+        }
     }
 }
 
@@ -87,7 +184,7 @@ extension CityScreenController: NSTableViewDataSource {
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         let identifier = tableView.identifier!
         if identifier == "Buy Table" {
-            return self.storeInventory.count
+            return self.stores[locationName]["inventory"].count
         } else if identifier == "Sell Table" {
             return self.user["inventory"].count
         } else {
@@ -103,7 +200,7 @@ extension CityScreenController: NSTableViewDataSource {
         
         // This section controls the buy table
         if tableIdentifier == "Buy Table" {
-            let itemData = self.storeInventory[row]
+            let itemData = self.stores[locationName]["inventory"][row]
             
             // Set the data for each column to the correct strings from the store data
             if identifier == "ItemName" {
@@ -119,7 +216,7 @@ extension CityScreenController: NSTableViewDataSource {
             
             if identifier == "ItemName" {
                 // Combine the quantity and item name
-                var data = String(itemData["quantity"].int!) + " " + itemData["name"].string!
+                var data = String(itemData["quantity"].int!) + "x " + itemData["name"].string!
                 cellView.textField!.stringValue = data
             } else if identifier == "ItemPrice" {
                 cellView.textField!.stringValue = String(stringInterpolationSegment: itemData["price"].double!)

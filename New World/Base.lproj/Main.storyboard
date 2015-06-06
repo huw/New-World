@@ -391,6 +391,9 @@
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
+                                                                                <connections>
+                                                                                    <action selector="buyChanged:" target="N18-dc-thx" id="wiJ-Sp-vHO"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                         <connections>
@@ -615,11 +618,11 @@
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
+                                                                                <connections>
+                                                                                    <action selector="sellChanged:" target="N18-dc-thx" id="wGH-8t-vsz"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
-                                                                        <connections>
-                                                                            <outlet property="textField" destination="aUW-n1-VDq" id="9ub-cu-446"/>
-                                                                        </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
                                                             </tableColumn>
