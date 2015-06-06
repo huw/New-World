@@ -1,11 +1,12 @@
 {
   "balance": 100,
-  "bankbalance": 0,
+  "bankBalance": 0,
   "loans": {
     "friendly": 0,
     "standard": 0,
     "super": 0
   },
+  "rate": 4.2,
   "inventory": [
     {
       "name": "Problems",

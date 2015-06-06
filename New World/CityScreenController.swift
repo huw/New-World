@@ -69,7 +69,7 @@ class CityScreenController: MoviewController {
         storeLocation.stringValue = stores[locationName]["storeLocation"].stringValue
         location.stringValue = stores[locationName]["name"].stringValue
         
-        cashOnHand.stringValue = String(stringInterpolationSegment: user["balance"].double!) + " with me"
+        reloadCash()
         cashInBank.stringValue = String(stringInterpolationSegment: user["bankbalance"].double!) + " in bank"
         let loanBalance = user["loans"]["friendly"].double! + user["loans"]["standard"].double! + user["loans"]["super"].double!
         cashInLoans.stringValue = String(stringInterpolationSegment: loanBalance) + " owed"
@@ -84,12 +84,27 @@ class CityScreenController: MoviewController {
         }
     }
     
+    func reloadCash() {
+        user["balance"] = JSON(round(user["balance"].double! * 100) / 100)
+        cashOnHand.stringValue = String(stringInterpolationSegment: user["balance"].double!) + " with me"
+    }
+    
+    // I'm so sorry I had to use this. I really didn't want to, but time constraints -_-
+    func errorBox(message: String, explanation: String = "") {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = explanation
+        alert.addButtonWithTitle("OK")
+        alert.runModal()
+    }
+    
     @IBAction func addItem(sender: AnyObject) {
         let row = tableView.rowForView(sender.superview!!)
         let itemData = self.stores[self.locationName]["inventory"][row]
+        let cash = itemData["price"].double! * Double(buyValues[row])
         
-        // Only if there's enough stock to sell to the user
-        if itemData["quantity"].int! >= buyValues[row] && buyValues[row] > 0 {
+        // Only if there's enough stock to sell to the user, and they have the cash
+        if itemData["quantity"].int! >= buyValues[row] && buyValues[row] > 0 && user["balance"].double! >= cash {
             
             var prev = -1
             var inventory = self.user["inventory"].array!
@@ -112,6 +127,10 @@ class CityScreenController: MoviewController {
                 self.user["inventory"][prev]["quantity"] = JSON(quantity + buyValues[row])
             }
             
+            // Remove cash ;(
+            self.user["balance"] = JSON(self.user["balance"].double! - cash)
+            reloadCash()
+            
             // Remove the item from inventory
             // Even if the item is at zero, we're still going to display it because stores always stock the same items upon successful revisits
             let quantity = self.stores[self.locationName]["inventory"][row]["quantity"].intValue
@@ -119,15 +138,30 @@ class CityScreenController: MoviewController {
             
             tableView.reloadData()
             sellTableView.reloadData()
+        } else if itemData["quantity"].int! < buyValues[row] {
+            errorBox("There isn't this much to buy!", explanation: "The amount you've entered is bigger than the amount in the store!")
+        } else if user["balance"].double! < cash {
+            errorBox("You don't have enough money to buy this!", explanation: "INCREASE FUNDS")
         }
 
     }
     
     @IBAction func buyChanged(sender: AnyObject) {
+        // Only do this if the number is valid, and also avoid that really weird Cocoa error
         if let button = sender.superview! {
             let row = tableView.rowForView(button)
             if row != -1 {
-                buyValues[row] = sender.integerValue!
+                if let value = sender.integerValue {
+                    if value > 0 {
+                        buyValues[row] = sender.integerValue!
+                    } else {
+                        errorBox("You entered a number which can't be sold", explanation: "Please enter a number that's bigger than 0")
+                    }
+                } else {
+                    errorBox("You entered a number which can't be sold", explanation: "Please enter a proper number")
+                }
+            } else {
+                errorBox("Please click outside the input box first", explanation: "Because of Cocoa, you have to click outside the highlighted box before clicking on the buy button")
             }
         }
     }
@@ -135,9 +169,10 @@ class CityScreenController: MoviewController {
     @IBAction func removeItem(sender: AnyObject) {
         let row = sellTableView.rowForView(sender.superview!!)
         let itemData = self.user["inventory"][row]
+        let cash = itemData["price"].double! * Double(sellValues[row])
         
         // Only if there's enough stock to sell to the user
-        if itemData["quantity"].int! >= sellValues[row] && sellValues[row] > 0 {
+        if itemData["quantity"].int! >= sellValues[row] && sellValues[row] > 0{
             
             var prev = -1
             var inventory = self.stores[self.locationName]["inventory"].array!
@@ -160,13 +195,26 @@ class CityScreenController: MoviewController {
                 self.stores[self.locationName]["inventory"][prev]["quantity"] = JSON(quantity + sellValues[row])
             }
             
+            // Add cash!
+            self.user["balance"] = JSON(self.user["balance"].double! + cash)
+            reloadCash()
+            
             // Remove the item from inventory
-            // Even if the item is at zero, we're still going to display it because stores always stock the same items upon successful revisits
+            // If it's at zero, remove it completely
             let quantity = self.user["inventory"][row]["quantity"].intValue
-            self.user["inventory"][row]["quantity"] = JSON(quantity - sellValues[row])
+            
+            if quantity - sellValues[row] <= 0 {
+                var userInventory = self.user["inventory"].array!
+                userInventory.removeAtIndex(row)
+                self.user["inventory"] = JSON(userInventory)
+            } else {
+                self.user["inventory"][row]["quantity"] = JSON(quantity - sellValues[row])
+            }
             
             tableView.reloadData()
             sellTableView.reloadData()
+        } else if itemData["quantity"].int! < sellValues[row] {
+            errorBox("There isn't this much to sell!", explanation: "You don't have enough of this item in your inventory!")
         }
     }
     
@@ -174,7 +222,17 @@ class CityScreenController: MoviewController {
         if let field = sender.superview! {
             let row = sellTableView.rowForView(field)
             if row != -1 {
-                sellValues[row] = sender.integerValue!
+                if let value = sender.integerValue {
+                    if value > 0 {
+                        sellValues[row] = sender.integerValue!
+                    } else {
+                        errorBox("You entered a number which can't be sold", explanation: "Please enter a number that's bigger than 0")
+                    }
+                } else {
+                    errorBox("You entered a number which can't be sold", explanation: "Please enter a proper number")
+                }
+            } else {
+                errorBox("Please click outside the input box first", explanation: "Because of Cocoa, you have to click outside the highlighted box before clicking on the sell button")
             }
         }
     }

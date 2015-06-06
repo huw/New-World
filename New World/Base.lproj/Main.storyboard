@@ -1197,6 +1197,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="20" name="HelveticaNeue-Bold"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="friendlyButton:" target="Bug-5C-UUg" id="URt-3Q-qeW"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELM-rU-ybd" userLabel="Standard (Button)">
                                             <rect key="frame" x="844" y="340" width="137" height="48"/>
@@ -1208,6 +1211,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="20" name="HelveticaNeue-Bold"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="standardButton:" target="Bug-5C-UUg" id="yUp-9s-n7S"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-cG-Jd3" userLabel="Super (Button)">
                                             <rect key="frame" x="1018" y="340" width="137" height="48"/>
@@ -1219,6 +1225,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="20" name="HelveticaNeue-Bold"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="superButton:" target="Bug-5C-UUg" id="MPv-HD-W9D"/>
+                                            </connections>
                                         </button>
                                         <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-Bp-hRj" userLabel="Deposit Amount">
                                             <rect key="frame" x="668" y="200" width="491" height="68"/>
@@ -1245,6 +1254,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="20" name="HelveticaNeue-Bold"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="withdrawButton:" target="Bug-5C-UUg" id="T19-Ms-DQL"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdQ-eK-jwP" userLabel="Deposit">
                                             <rect key="frame" x="668" y="140" width="228" height="48"/>
@@ -1256,10 +1268,13 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="20" name="HelveticaNeue-Bold"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="depositButton:" target="Bug-5C-UUg" id="DmD-ZL-GiM"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-Ye-bYC" userLabel="Balance">
                                             <rect key="frame" x="460" y="24" width="700" height="68"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Interest Rate:" id="G4I-XU-p3L">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Balance:" id="G4I-XU-p3L">
                                                 <font key="font" size="55" name="HelveticaNeue-Thin"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1279,8 +1294,15 @@
                     </view>
                     <connections>
                         <outlet property="backButton1" destination="bI8-VD-qob" id="mLO-4T-wMM"/>
+                        <outlet property="balanceField" destination="nbW-Bp-hRj" id="cpF-uC-Pyp"/>
+                        <outlet property="balanceLabel" destination="rSG-Ye-bYC" id="iYA-OX-7zx"/>
+                        <outlet property="borrowField" destination="ykL-Sr-7gi" id="alZ-yP-RyT"/>
+                        <outlet property="friendlyLabel" destination="GGB-UU-6AE" id="QrP-hL-GNC"/>
+                        <outlet property="interestLabel" destination="Y7c-V9-jbv" id="AUw-Ys-lfR"/>
                         <outlet property="locationLabel" destination="11F-Xf-hi0" id="fSI-pc-OEm"/>
                         <outlet property="player" destination="Tbt-rE-Bds" id="6U9-sv-p3y"/>
+                        <outlet property="standardLabel" destination="6Wy-bg-Kgx" id="G0P-hX-n9r"/>
+                        <outlet property="superLabel" destination="oJw-QG-GQj" id="MAZ-7d-EY6"/>
                     </connections>
                 </viewController>
                 <customObject id="RTT-oj-tUw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
