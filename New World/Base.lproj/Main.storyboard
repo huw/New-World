@@ -1272,8 +1272,16 @@
                                                 <action selector="depositButton:" target="Bug-5C-UUg" id="DmD-ZL-GiM"/>
                                             </connections>
                                         </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR3-CA-NLE" userLabel="Balance">
+                                            <rect key="frame" x="460" y="24" width="700" height="30"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Owed:" id="NQb-Cj-RIF">
+                                                <font key="font" size="23" name="HelveticaNeue"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-Ye-bYC" userLabel="Balance">
-                                            <rect key="frame" x="460" y="24" width="700" height="68"/>
+                                            <rect key="frame" x="460" y="45" width="700" height="68"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Balance:" id="G4I-XU-p3L">
                                                 <font key="font" size="55" name="HelveticaNeue-Thin"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1300,6 +1308,7 @@
                         <outlet property="friendlyLabel" destination="GGB-UU-6AE" id="QrP-hL-GNC"/>
                         <outlet property="interestLabel" destination="Y7c-V9-jbv" id="AUw-Ys-lfR"/>
                         <outlet property="locationLabel" destination="11F-Xf-hi0" id="fSI-pc-OEm"/>
+                        <outlet property="owedLabel" destination="rR3-CA-NLE" id="JkH-zC-Hr9"/>
                         <outlet property="player" destination="Tbt-rE-Bds" id="6U9-sv-p3y"/>
                         <outlet property="standardLabel" destination="6Wy-bg-Kgx" id="G0P-hX-n9r"/>
                         <outlet property="superLabel" destination="oJw-QG-GQj" id="MAZ-7d-EY6"/>

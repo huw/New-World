@@ -20,7 +20,7 @@ class TitleScreenController: MoviewController {
         self.stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
         self.user = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
         
-        self.playVideo(player, fileName: "titlescreen")
+        self.playVideo(player, fileName: "utopolis")
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

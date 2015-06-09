@@ -22,6 +22,7 @@ class CityScreenController: MoviewController {
     @IBOutlet weak var cashInBank: NSTextField!
     
     var locationName: String = "steamershill"
+    var previousLocation: String = ""
     var buyValues = [Int]()
     var sellValues = [Int]()
     
@@ -42,6 +43,7 @@ class CityScreenController: MoviewController {
         if segue.destinationController is TrainStationController {
             let destination = segue.destinationController as! TrainStationController
             destination.locationName = self.locationName
+            destination.previousLocation = self.previousLocation
         } else if segue.destinationController is BankController {
             let destination = segue.destinationController as! BankController
             destination.locationName = self.locationName
@@ -51,7 +53,7 @@ class CityScreenController: MoviewController {
     
     func changeLocation() {
         // Play the video for this location
-        self.playVideo(player, fileName: locationName)
+        self.playVideo(player, fileName: "utopolis")
         
         reloadArrays()
         
@@ -70,9 +72,20 @@ class CityScreenController: MoviewController {
         location.stringValue = stores[locationName]["name"].stringValue
         
         reloadCash()
-        cashInBank.stringValue = String(stringInterpolationSegment: user["bankbalance"].double!) + " in bank"
-        let loanBalance = user["loans"]["friendly"].double! + user["loans"]["standard"].double! + user["loans"]["super"].double!
-        cashInLoans.stringValue = String(stringInterpolationSegment: loanBalance) + " owed"
+        
+        // Change the day (compound interest, etc)
+        // Compound interest:
+        let rate = round(self.user["rate"].double! * 10) / 1000
+        
+        // Multiply the loan by the rate, and then round it
+        self.user["loans"]["friendly"] = JSON(round(self.user["loans"]["friendly"].double! * (1 + (rate/2)) * 100) / 100)
+        self.user["loans"]["standard"] = JSON(round(self.user["loans"]["standard"].double! * (1 + rate) * 100) / 100)
+        self.user["loans"]["super"] = JSON(round(self.user["loans"]["super"].double! * (1 + (rate*2)) * 100) / 100)
+        
+        // Compound bank balance if we don't owe anything!
+        if self.owed() <= 0 {
+            self.user["bankBalance"] = JSON(round(self.user["bankBalance"].double! * (1 + rate) * 100) / 100)
+        }
     }
     
     func reloadArrays() {
@@ -86,16 +99,9 @@ class CityScreenController: MoviewController {
     
     func reloadCash() {
         user["balance"] = JSON(round(user["balance"].double! * 100) / 100)
-        cashOnHand.stringValue = String(stringInterpolationSegment: user["balance"].double!) + " with me"
-    }
-    
-    // I'm so sorry I had to use this. I really didn't want to, but time constraints -_-
-    func errorBox(message: String, explanation: String = "") {
-        let alert = NSAlert()
-        alert.messageText = message
-        alert.informativeText = explanation
-        alert.addButtonWithTitle("OK")
-        alert.runModal()
+        cashOnHand.stringValue = "$" + String(stringInterpolationSegment: user["balance"].double!) + " with me"
+        cashInBank.stringValue = "$" + String(stringInterpolationSegment: user["bankBalance"].double!) + " in bank"
+        cashInLoans.stringValue = "$" + String(stringInterpolationSegment: self.owed()) + " owed"
     }
     
     @IBAction func addItem(sender: AnyObject) {

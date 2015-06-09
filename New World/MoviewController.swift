@@ -13,7 +13,7 @@ import AVKit
 class MoviewController: NSViewController {
     
     var bgMovie: AVPlayerView = AVPlayerView()
-    var fileName: String = "titlescreen"
+    var fileName: String = "utopolis"
     
     // Load the JSON file containing the data on locations and stores
     var stores: JSON = []
@@ -58,6 +58,20 @@ class MoviewController: NSViewController {
     func restartVideo(sender: AnyObject) {
         self.bgMovie.player.seekToTime(CMTimeMake(0, 1))
         self.bgMovie.player.play()
+    }
+    
+    // I'm so sorry I had to use this. I really didn't want to, but time constraints -_-
+    func errorBox(message: String, explanation: String = "") {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = explanation
+        alert.addButtonWithTitle("OK")
+        alert.runModal()
+    }
+    
+    // A convenience for the amount of cash we owe
+    func owed() -> Double {
+        return self.user["loans"]["friendly"].double! + self.user["loans"]["standard"].double! + self.user["loans"]["super"].double!
     }
 }
 

@@ -28,6 +28,7 @@ class TrainStationController: MoviewController {
     @IBOutlet weak var hellButton: NSButton!
     
     var locationName: String = "Location"
+    var previousLocation: String = ""
     var destination: String = ""
     
     override func viewDidLoad() {
@@ -53,7 +54,7 @@ class TrainStationController: MoviewController {
             attributes: attrs
         )
         
-        self.playVideo(player, fileName: "trainstation")
+        self.playVideo(player, fileName: "utopolis")
         
         switch locationName {
         case "treetopgully":
@@ -92,6 +93,33 @@ class TrainStationController: MoviewController {
         default:
             true
         }
+        
+        // Block off the previous location (unless it's Broken Creek)
+        switch previousLocation {
+        case "treetopgully":
+            treetopgullyButton.enabled = false
+        case "steamershill":
+            steamershillButton.enabled = false
+        case "newnewtown":
+            newnewtownButton.enabled = false
+        case "utopolis":
+            utopolisButton.enabled = false
+        case "lavamountain":
+            lavamountainButton.enabled = false
+        case "something":
+            somethingButton.enabled = false
+        case "bobsknuckle":
+            bobsknuckleButton.enabled = false
+        case "hell":
+            hellButton.enabled = false
+        default:
+            true
+        }
+        
+        // Don't block the user off into Lava Mountain, but don't always leave Broken Creek available
+        if previousLocation == "brokencreek" && locationName != "lavamountain" {
+            brokencreekButton.enabled = false
+        }
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -101,6 +129,7 @@ class TrainStationController: MoviewController {
         next.stores = self.stores
         next.user = self.user
         next.locationName = self.destination
+        next.previousLocation = self.locationName
     }
     
     @IBAction func backButton1(sender: AnyObject) {
