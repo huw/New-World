@@ -90,8 +90,7 @@ class TrainStationController: MoviewController {
         case "hell":
             treetopgullyButton.enabled = true
             bobsknuckleButton.enabled = true
-        default:
-            true
+        default: ()
         }
         
         // Block off the previous location (unless it's Broken Creek)
@@ -112,8 +111,7 @@ class TrainStationController: MoviewController {
             bobsknuckleButton.enabled = false
         case "hell":
             hellButton.enabled = false
-        default:
-            true
+        default: ()
         }
         
         // Don't block the user off into Lava Mountain, but don't always leave Broken Creek available
@@ -172,6 +170,7 @@ class TrainStationController: MoviewController {
         self.destination = destination
         destinationLabel.stringValue = self.stores[destination]["name"].stringValue.capitalizedString
         
+        // The depart button starts disabled so users don't go to an empty place
         if departButton.enabled == false {
             departButton.enabled = true
         }
