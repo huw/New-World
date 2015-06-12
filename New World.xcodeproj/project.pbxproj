@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42016F521B2AF2B1008C7D90 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 42016F511B2AF2B1008C7D90 /* events.json */; };
 		4208015C1B1410D100397EE4 /* Shia.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4208015B1B1410D100397EE4 /* Shia.jpeg */; };
 		4208015E1B14120100397EE4 /* Button_Event.png in Resources */ = {isa = PBXBuildFile; fileRef = 4208015D1B14120100397EE4 /* Button_Event.png */; };
 		420801601B14120C00397EE4 /* Button_Event_Special.png in Resources */ = {isa = PBXBuildFile; fileRef = 4208015F1B14120C00397EE4 /* Button_Event_Special.png */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42016F511B2AF2B1008C7D90 /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		4208015B1B1410D100397EE4 /* Shia.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shia.jpeg; sourceTree = "<group>"; };
 		4208015D1B14120100397EE4 /* Button_Event.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Event.png; sourceTree = "<group>"; };
 		4208015F1B14120C00397EE4 /* Button_Event_Special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Event_Special.png; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				42CC50A31B0EE41800D7B841 /* utopolis.mp4 */,
 				42B2D36B1B1D2D4B00B079C1 /* user.json */,
 				426DEC7C1B148B2600AC8E94 /* stores.json */,
+				42016F511B2AF2B1008C7D90 /* events.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				42C627221B1407340012E5A3 /* Button_Thin.png in Resources */,
 				42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */,
 				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
+				42016F521B2AF2B1008C7D90 /* events.json in Resources */,
 				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,
 				4222B19D1B01B23500FCBA0F /* Button_BG.png in Resources */,
 				426DEC7D1B148B2600AC8E94 /* stores.json in Resources */,

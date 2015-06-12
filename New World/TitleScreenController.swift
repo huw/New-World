@@ -19,6 +19,7 @@ class TitleScreenController: MoviewController {
         
         self.stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
         self.user = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        self.events = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("events", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
         
         self.playVideo(player, fileName: "utopolis")
     }
@@ -27,6 +28,7 @@ class TitleScreenController: MoviewController {
         let next = segue.destinationController as! MoviewController
         next.stores = self.stores
         next.user = self.user
+        next.events = self.events
         player.player.pause()
     }
     

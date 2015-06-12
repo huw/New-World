@@ -126,6 +126,7 @@ class TrainStationController: MoviewController {
         next.dismissController(nil)
         next.stores = self.stores
         next.user = self.user
+        next.events = self.events
         next.locationName = self.destination
         next.previousLocation = self.locationName
     }

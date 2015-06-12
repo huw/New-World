@@ -40,6 +40,7 @@ class CityScreenController: MoviewController {
         let next = segue.destinationController as! MoviewController
         next.stores = self.stores
         next.user = self.user
+        next.events = self.events
         
         // Do stuff specific to the classes (these ones have a specific `locationName` property)
         if segue.destinationController is TrainStationController {

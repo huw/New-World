@@ -1,0 +1,130 @@
+[
+    {
+        "title": "Mining Boom!",
+        "sub": "'Pretty f**king cool'—Gine Rinehart",
+        "up": [
+            "Courtly Gesture",
+            "Cool Vibe"
+        ],
+        "down": [
+            "Pickaxe",
+            "Mining Helmet",
+            "Interesting Rock",
+            "Wood",
+            "Nail",
+            "Flaming Torch",
+            "Climbing Hook",
+            "Oil"
+        ]
+    },
+    {
+        "title": "Tech Bubble Bursts",
+        "sub": "Sexism triumphs",
+        "up": [
+            "Keyboard + Mouse",
+            "2GB USB Stick",
+            "Null Object",
+            "Selfie Stick"
+        ],
+        "down": [
+            "Courtly Gesture"
+        ]
+    },
+    {
+        "title": "Spanners: Cool Again?",
+        "sub": "Spanner experts say 'Yes'",
+        "up": [
+            "Spanner"
+        ],
+        "down": [
+            "Broken Spanner"
+        ]
+    },
+    {
+        "title": "*crickets*",
+        "sub": "chirp chirp chirp",
+        "down": [
+            "Cricket Bat"
+        ]
+    },
+    {
+        "title": "Amatuer Poets on the rise",
+        "sub": "'Fuddled grunt ugly'—Vogon",
+        "down": [
+            "Mediocre Poetry"
+        ]
+    },
+    {
+        "title": "Patriarchy Rules",
+        "sub": "Courtly gestures now enforced",
+        "down": [
+            "Courtly Gesture"
+        ],
+        "up": [
+            "Cool Vibe"
+        ]
+    },
+    {
+        "title": "New World Fashion Week",
+        "sub": "It's the same Stylish Jacket",
+        "down": [
+            "Wooden Leg",
+            "Spray Jacket",
+            "Stockings",
+            "Hemp Shirt",
+            "Hemp Pants"
+        ],
+        "up": [
+            "Hair Clippers",
+            "On-fleek Eyebrows",
+            "Wristwatch",
+            "Ambiguous Dress",
+            "Hair Extensions",
+            "Stylish Jacket"
+        ]
+    },
+    {
+        "title": "Gold Rush!",
+        "sub": "Shame there's no mining minigame",
+        "up": [
+            "Pickaxe",
+            "Mining Helmet",
+            "Interesting Rock",
+            "Flaming Torch",
+            "Gold-panning Pan",
+            "Assorted Maps",
+            "Hiking Rucksack"
+        ]
+    },
+    {
+        "title": "Oil is found",
+        "sub": "Price of oil still boring",
+        "down": [
+            "Oil"
+        ]
+    },
+    {
+        "title": "Trees Grow",
+        "sub": "Proper Saplings favourable",
+        "down": [
+            "Proper Sapling"
+        ]
+    },
+    {
+        "title": "New Newtown Drug Bust",
+        "sub": "'I don't remember it'—Local",
+        "up": [
+            "Not Marijuana",
+            "Hemp Shirt",
+            "Hemp Pants",
+            "Hot Coffee"
+        ]
+    },
+    {
+        "title": "'Good Book' Burnings",
+        "sub": "Why is Hell even in this game?",
+        "down": [
+            "Bible Scraps"
+        ]
+    }
+]

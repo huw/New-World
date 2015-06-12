@@ -18,6 +18,7 @@ class MoviewController: NSViewController {
     // Load the JSON file containing the data on locations and stores
     var stores: JSON = []
     var user: JSON = []
+    var events: JSON = []
     
     override func viewDidDisappear() {
         super.viewDidDisappear()
