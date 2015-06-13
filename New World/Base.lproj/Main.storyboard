@@ -101,7 +101,7 @@
         <!--Title Screen-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Title Screen" id="XfG-lQ-9wD" customClass="TitleScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Title Screen" storyboardIdentifier="TitleScreen" id="XfG-lQ-9wD" customClass="TitleScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,8 +134,30 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaH-E1-SYW" userLabel="Reset">
+                                <rect key="frame" x="512" y="322" width="256" height="40"/>
+                                <shadow key="shadow" blurRadius="4">
+                                    <size key="offset" width="0.0" height="2"/>
+                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="squareTextured" title="RESET" bezelStyle="texturedSquare" image="Button_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="RrD-bx-nWy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="22"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="resetButton:" target="XfG-lQ-9wD" id="6b6-eK-V3N"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-j4-hfI">
+                                <rect key="frame" x="490" y="302" width="300" height="20"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="New World auto-saves your progress" id="h1K-nk-xQz">
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-Oa-rhl" userLabel="Quit">
-                                <rect key="frame" x="512" y="307" width="256" height="40"/>
+                                <rect key="frame" x="512" y="250" width="256" height="40"/>
                                 <shadow key="shadow" blurRadius="4">
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,7 +197,7 @@
         <!--City Screen-->
         <scene sceneID="LDt-uh-XTO">
             <objects>
-                <viewController title="City Screen" id="N18-dc-thx" customClass="CityScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="City Screen" storyboardIdentifier="CityScreen" id="N18-dc-thx" customClass="CityScreenController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="XLZ-Hy-Urh">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -805,7 +827,7 @@
         <!--Train Station-->
         <scene sceneID="hjj-Zl-EF0">
             <objects>
-                <viewController title="Train Station" id="p40-xK-G0R" userLabel="Train Station" customClass="TrainStationController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Train Station" storyboardIdentifier="TrainStation" id="p40-xK-G0R" userLabel="Train Station" customClass="TrainStationController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="FVc-2c-3WL">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1065,7 +1087,7 @@
         <!--Bank-->
         <scene sceneID="i0v-nf-Tlz">
             <objects>
-                <viewController title="Bank" id="Bug-5C-UUg" userLabel="Bank" customClass="BankController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bank" storyboardIdentifier="Bank" id="Bug-5C-UUg" userLabel="Bank" customClass="BankController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="daJ-6n-Q5M">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1421,6 +1443,6 @@
         <image name="Train_Map" width="960" height="633"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k8Q-ok-kKF"/>
+        <segue reference="8rc-8L-qhp"/>
     </inferredMetricsTieBreakers>
 </document>

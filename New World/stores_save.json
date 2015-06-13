@@ -1,0 +1,380 @@
+{
+    "bobsknuckle": {
+      "name": "Bob's Knuckle",
+      "storeName": "Bob's Knuckle General Store",
+      "storeLocation": "4-5 Main Street, Bob’s Knuckle, New World",
+      "inventory": [
+        {
+          "name": "Pickaxe",
+          "quantity": 5,
+          "price": 55
+        },
+        {
+          "name": "Mining Helmet",
+          "quantity": 7,
+          "price": 20
+        },
+        {
+          "name": "Broken Spanner",
+          "quantity": 2,
+          "price": 2
+        },
+        {
+          "name": "Wooden Leg",
+          "quantity": 1,
+          "price": 75
+        },
+        {
+          "name": "Mediocre Poetry",
+          "quantity": 224,
+          "price": 0.05
+        }, 
+        {
+          "name": "Keyboard + Mouse",
+          "quantity": 3,
+          "price": 200
+        },
+        {
+          "name": "Interesting Rock",
+          "quantity": 1,
+          "price": 30000
+        }
+      ]
+    },
+    "something": {
+      "name": "Something",
+      "storeName": "Something For Everyone",
+      "storeLocation": "73 Ambiguous Road, Something, New World",
+      "inventory": [
+        {
+          "name": "Cricket Bat",
+          "quantity": 3,
+          "price": 45
+        },
+        {
+          "name": "Sharded Glass",
+          "quantity": 25,
+          "price": 1
+        },
+        {
+          "name": "Courtly Gesture",
+          "quantity": 4,
+          "price": 99
+        },
+        {
+          "name": "Punching Bag",
+          "quantity": 2,
+          "price": 20
+        },
+        {
+          "name": "Spray Jacket",
+          "quantity": 24,
+          "price": 35
+        },
+        {
+          "name": "Hair Clippers",
+          "quantity": 10,
+          "price": 10
+        },
+        {
+          "name": "New Sportscar",
+          "quantity": 1,
+          "price": 102326.99
+        }
+      ]
+    },
+    "brokencreek": {
+      "name": "Broken Creek",
+      "storeName": "Help We're Running Out Of Water",
+      "storeLocation": "Somewhere in Broken Creek",
+      "inventory": [
+        {
+          "name": "Assorted Scissors",
+          "quantity": 9,
+          "price": 0.5
+        },
+        {
+          "name": "Light Bulb",
+          "quantity": 26,
+          "price": 7
+        },
+        {
+          "name": "Wood",
+          "quantity": 87,
+          "price": 2.1
+        },
+        {
+          "name": "String",
+          "quantity": 6,
+          "price": 4
+        }, 
+        {
+          "name": "Cabbage",
+          "quantity": 19,
+          "price": 2.5
+        },
+        {
+          "name": "Nail",
+          "quantity": 188,
+          "price": 0.3
+        },
+        {
+          "name": "Turbo Engine",
+          "quantity": 1,
+          "price": 6000
+        }
+      ]
+    },
+    "lavamountain": {
+      "name": "Lava Mountain",
+      "storeName": "Crate",
+      "storeLocation": "Shop 3, Woolson's Crater, Lava Mountain, New World",
+      "inventory": [
+        {
+          "name": "On-Fleek Eyebrows",
+          "quantity": 2,
+          "price": 15
+        },
+        {
+          "name": "Stockings",
+          "quantity": 16,
+          "price": 5
+        },
+        {
+          "name": "Wristwatch",
+          "quantity": 5,
+          "price": 159.99
+        },
+        {
+          "name": "Cool Vibe",
+          "quantity": 1,
+          "price": 0.4
+        },
+        {
+          "name": "Water",
+          "quantity": 300,
+          "price": 0.7
+        },
+        {
+          "name": "Flaming Torch",
+          "quantity": 10,
+          "price": 1
+        },
+        {
+          "name": "Obsidian Knife",
+          "quantity": 1,
+          "price": 20000
+        }
+      ]
+    },
+    "steamershill": {
+      "name": "Steamer's Hill",
+      "storeName": "Hill Trader",
+      "storeLocation": "27 Arterial Road, Steamer's Hill, New World",
+      "inventory": [
+        {
+          "name": "Gold-Panning Pan",
+          "quantity": 23,
+          "price": 16
+        },
+        {
+          "name": "Spanner",
+          "quantity": 40,
+          "price": 8.99
+        },
+        {
+          "name": "Climbing Hook",
+          "quantity": 6,
+          "price": 50
+        },
+        {
+          "name": "Assorted Maps",
+          "quantity": 20,
+          "price": 4
+        },
+        {
+          "name": "Newspaper Ink",
+          "quantity": 10,
+          "price": 30
+        },
+        {
+          "name": "Oil",
+          "quantity": 25,
+          "price": 10
+        },
+        {
+          "name": "Ambiguous Dress",
+          "quantity": 1,
+          "price": 12000
+        }
+      ]
+    },
+    "treetopgully": {
+      "name": "Treetop Gully",
+      "storeName": "Tree Top Prices",
+      "storeLocation": "12th Branch, Tree 7, Treetop Gully, New World",
+      "inventory": [
+        {
+          "name": "Stick",
+          "quantity": 738,
+          "price": 0.05
+        },
+        {
+          "name": "Proper Sapling",
+          "quantity": 35,
+          "price": 35
+        },
+        {
+          "name": "Spring Water",
+          "quantity": 300,
+          "price": 1.2
+        },
+        {
+          "name": "Doorbell",
+          "quantity": 50,
+          "price": 24
+        },
+        {
+          "name": "Window Pane",
+          "quantity": 5,
+          "price": 100
+        },
+        {
+          "name": "Hiking Rucksack",
+          "quantity": 5,
+          "price": 100
+        },
+        {
+          "name": "Treetop House",
+          "quantity": 1,
+          "price": 90000
+        }
+      ]
+    },
+    "newnewtown": {
+      "name": "New Newtown",
+      "storeName": "Hipster's Delight",
+      "storeLocation": "16.1÷2.3 🎅🏿 Avenue, New Newtown, New World",
+      "inventory": [
+        {
+          "name": "Not Marijuana",
+          "quantity": 44,
+          "price": 20
+        },
+        {
+          "name": "Beats",
+          "quantity": 10,
+          "price": 229.95
+        },
+        {
+          "name": "Hemp Shirt",
+          "quantity": 20,
+          "price": 15
+        },
+        {
+          "name": "Hemp Pants",
+          "quantity": 20,
+          "price": 25
+        },
+        {
+          "name": "Battle Axe",
+          "quantity": 5,
+          "price": 96
+        },
+        {
+          "name": "2GB USB Stick",
+          "quantity": 200,
+          "price": 2
+        },
+        {
+          "name": "Arty Painting",
+          "quantity": 1,
+          "price": 45000
+        }
+      ]
+    },
+    "utopolis": {
+      "name": "Utopolis",
+      "storeName": "24/7 Supplies",
+      "storeLocation": "83 High Street, Utopolis, New World",
+      "inventory": [
+        {
+          "name": "Parking Ticket",
+          "quantity": 800,
+          "price": 0.1
+        },
+        {
+          "name": "Sunscreen",
+          "quantity": 25,
+          "price": 5
+        },
+        {
+          "name": "Hot Coffee",
+          "quantity": 10,
+          "price": 4
+        },
+        {
+          "name": "Bicycle",
+          "quantity": 5,
+          "price": 235
+        },
+        {
+          "name": "Hair Extensions",
+          "quantity": 55,
+          "price": 3.5
+        },
+        {
+          "name": "Stylish Jacket",
+          "quantity": 10,
+          "price": 50
+        },
+        {
+          "name": "Scholarship",
+          "quantity": 1,
+          "price": 60099.63
+        }
+      ]
+    },
+    "hell": {
+      "name": "Hell",
+      "storeName": "All Things Cthulu",
+      "storeLocation": "4th Quadrant, 4th Circle, Hell",
+      "inventory": [
+        {
+          "name": "Null Object",
+          "quantity": 0,
+          "price": 0
+        },
+        {
+          "name": "Selfie Stick",
+          "quantity": 38,
+          "price": 20
+        },
+        {
+          "name": "Demon's Horn",
+          "quantity": 7,
+          "price": 230
+        },
+        {
+          "name": "Spider Venom",
+          "quantity": 23,
+          "price": 50
+        },
+        {
+          "name": "Bone Trumpet",
+          "quantity": 10,
+          "price": 5
+        },
+        {
+          "name": "Bible Scraps",
+          "quantity": 666,
+          "price": 0.1
+        },
+        {
+          "name": "The Gay Agenda",
+          "quantity": 1,
+          "price": 500000
+        }
+      ]
+    }
+}

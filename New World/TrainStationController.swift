@@ -47,6 +47,9 @@ class TrainStationController: MoviewController {
                 size: 71
             )!
         ]
+        
+        self.locationName = self.user["location"].string!
+        self.previousLocation = self.user["previousLocation"].string!
 
         var location = self.stores[locationName]["name"].string!
         locationLabel.attributedTitle = NSAttributedString(
@@ -126,11 +129,13 @@ class TrainStationController: MoviewController {
         player.player.pause()
         let next = segue.destinationController as! CityScreenController
         next.dismissController(nil)
+        
+        self.user["location"] = JSON(self.destination)
+        self.user["previousLocation"] = JSON(self.locationName)
+        
         next.stores = self.stores
         next.user = self.user
         next.events = self.events
-        next.locationName = self.destination
-        next.previousLocation = self.locationName
     }
     
     @IBAction func backButton1(sender: AnyObject) {

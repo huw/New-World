@@ -44,6 +44,8 @@ class BankController: MoviewController {
                 )!
         ]
         
+        self.locationName = self.user["location"].string!
+        
         var location = self.stores[locationName]["name"].string!
         locationLabel.attributedTitle = NSAttributedString(
             string: location,

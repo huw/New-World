@@ -12,14 +12,11 @@ import AVFoundation
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
-    }
-
     func applicationWillTerminate(aNotification: NSNotification) {
+        let window = NSApplication.sharedApplication().keyWindow
+        let view = window?.contentViewController as! MoviewController
+        view.user.rawString()?.writeToFile(NSBundle.mainBundle().pathForResource("user_save", ofType: "json")!, atomically: false, encoding: NSUTF8StringEncoding, error: nil)
+        view.stores.rawString()?.writeToFile(NSBundle.mainBundle().pathForResource("stores_save", ofType: "json")!, atomically: false, encoding: NSUTF8StringEncoding, error: nil)
     }
-
-
 }
 

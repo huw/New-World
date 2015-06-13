@@ -24,7 +24,7 @@ class CityScreenController: MoviewController {
     
     @IBOutlet weak var headline: NSTextField!
     @IBOutlet weak var subtitle: NSTextField!
-    
+
     var locationName: String = "steamershill"
     var previousLocation: String = ""
     var buyValues = [Int]()
@@ -49,16 +49,16 @@ class CityScreenController: MoviewController {
         // Do stuff specific to the classes (these ones have a specific `locationName` property)
         if segue.destinationController is TrainStationController {
             let destination = segue.destinationController as! TrainStationController
-            destination.locationName = self.locationName
-            destination.previousLocation = self.previousLocation
         } else if segue.destinationController is BankController {
             let destination = segue.destinationController as! BankController
-            destination.locationName = self.locationName
             destination.previous = self
         }
     }
     
     func changeLocation() {
+        self.locationName = self.user["location"].string!
+        self.previousLocation = self.user["previousLocation"].string!
+        
         // Play the video for this location
         self.playVideo(player, fileName: "utopolis")
         

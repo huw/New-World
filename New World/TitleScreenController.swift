@@ -17,9 +17,7 @@ class TitleScreenController: MoviewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
-        self.user = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
-        self.events = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("events", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        readFiles()
         
         self.playVideo(player, fileName: "utopolis")
     }
@@ -32,8 +30,21 @@ class TitleScreenController: MoviewController {
         player.player.pause()
     }
     
+    func readFiles() {
+        self.stores = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores_save", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        self.user = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user_save", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+        self.events = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("events", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)
+    }
+    
     @IBAction func quitButton(sender: AnyObject) {
         println("QUIT")
         exit(0)
+    }
+    
+    @IBAction func resetButton(sender: AnyObject) {
+        // Two very long lines which copy the default dataset to the save files, overwriting them
+        NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("user", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!.writeToFile(NSBundle.mainBundle().pathForResource("user_save", ofType: "json")!, atomically: false)
+        NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!.writeToFile(NSBundle.mainBundle().pathForResource("stores_save", ofType: "json")!, atomically: false)
+        readFiles()
     }
 }
