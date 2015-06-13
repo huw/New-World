@@ -40,7 +40,6 @@ class CityScreenController: MoviewController {
         let next = segue.destinationController as! MoviewController
         next.stores = self.stores
         next.user = self.user
-        next.events = self.events
         
         // Do stuff specific to the classes (these ones have a specific `locationName` property)
         if segue.destinationController is TrainStationController {
@@ -122,27 +121,9 @@ class CityScreenController: MoviewController {
                 
                 // PRICE
                 // We just randomise this slightly
-                let oldPrice = self.stores[location]["inventory"][itemNum]["price"].double!
-                var newPrice: Double = 0
-                
-                // New price should never be 0
-                while round(newPrice*10)/10 <= 0 {
-                    newPrice = oldPrice * (1 + (0.1 * Double(arc4random()) / 0xFFFFFFFF - 0.05))
-                }
+                let newPrice = self.stores[location]["inventory"][itemNum]["price"].double! * (1 + (0.1 * Double(arc4random()) / 0xFFFFFFFF - 0.05))
                 self.stores[location]["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
             }
-        }
-        
-        // Randomise the prices of our own items
-        for itemNum in 0...self.user["inventory"].count - 1 {
-            let oldPrice = self.user["inventory"][itemNum]["price"].double!
-            var newPrice: Double = 0
-            
-            // New price should always be > 0
-            while round(newPrice*10)/10 <= 0 {
-                newPrice = oldPrice * (1 + (0.1 * Double(arc4random()) / 0xFFFFFFFF - 0.05))
-            }
-            self.user["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
         }
     }
     
@@ -323,7 +304,6 @@ extension CityScreenController: NSTableViewDataSource {
         // This section controls the buy table
         if tableIdentifier == "Buy Table" {
             let itemData = self.stores[locationName]["inventory"][row]
-            let owed = self.user["loans"]["friendly"].double! + self.user["loans"]["standard"].double! + self.user["loans"]["super"].double!
             
             // Set the data for each column to the correct strings from the store data
             if identifier == "ItemName" {
@@ -332,13 +312,11 @@ extension CityScreenController: NSTableViewDataSource {
                 cellView.textField!.stringValue = String(itemData["quantity"].int!)
             } else if identifier == "ItemPrice" {
                 cellView.textField!.stringValue = "$" + String(stringInterpolationSegment: itemData["price"].double!)
-            } else if contains(kingItems, itemData["name"].string!) && owed > 100 {
-                
-                // Don't let the user buy special items if they owe more than $100
-                // So that they can't get the Gay Agenda on borrowed cash
-                // Remove the buy/quantity stuff to prevent this
-                for subview in cellView.subviews {
-                    subview.removeFromSuperview!()
+            } else if contains(kingItems, itemData["name"].string!) {
+                if identifier == "BuyNum" {
+                    println(cellView.subviews)
+                } else if identifier == "BuyButton" {
+                    println(cellView.subviews)
                 }
             }
         // This section controls the sell table
