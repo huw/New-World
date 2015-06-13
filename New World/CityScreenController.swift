@@ -17,9 +17,13 @@ class CityScreenController: MoviewController {
     @IBOutlet weak var storeName: NSTextField!
     @IBOutlet weak var storeLocation: NSTextField!
     @IBOutlet weak var location: NSTextField!
+    
     @IBOutlet weak var cashOnHand: NSTextField!
     @IBOutlet weak var cashInLoans: NSTextField!
     @IBOutlet weak var cashInBank: NSTextField!
+    
+    @IBOutlet weak var headline: NSTextField!
+    @IBOutlet weak var subtitle: NSTextField!
     
     var locationName: String = "steamershill"
     var previousLocation: String = ""
@@ -40,6 +44,7 @@ class CityScreenController: MoviewController {
         let next = segue.destinationController as! MoviewController
         next.stores = self.stores
         next.user = self.user
+        next.events = self.events
         
         // Do stuff specific to the classes (these ones have a specific `locationName` property)
         if segue.destinationController is TrainStationController {
@@ -95,6 +100,25 @@ class CityScreenController: MoviewController {
             self.user["bankBalance"] = JSON(round(self.user["bankBalance"].double! * (1 + rate) * 100) / 100)
         }
         
+        // Random events
+        let event = self.events[Int(arc4random_uniform(UInt32(self.events.count)))]
+        headline.stringValue = event["title"].stringValue
+        subtitle.stringValue = event["sub"].stringValue
+        
+        // Build item fluctuation arrays
+        var up: [String] = []
+        var down: [String] = []
+        if let upArray = event["up"].array {
+            for item in upArray {
+                up.append(item.string!)
+            }
+        }
+        if let downArray = event["down"].array {
+            for item in downArray {
+                down.append(item.string!)
+            }
+        }
+        
         // Regenerate and randomise items + prices:
         for location in ["treetopgully", "steamershill", "newnewtown", "utopolis", "lavamountain", "something", "bobsknuckle", "hell", "brokencreek"] {
             let inventory = JSON(data: NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("stores", ofType: "json")!, options: .DataReadingMappedIfSafe, error: nil)!)[location]["inventory"].array!
@@ -121,9 +145,41 @@ class CityScreenController: MoviewController {
                 
                 // PRICE
                 // We just randomise this slightly
-                let newPrice = self.stores[location]["inventory"][itemNum]["price"].double! * (1 + (0.1 * Double(arc4random()) / 0xFFFFFFFF - 0.05))
+                let oldPrice = self.stores[location]["inventory"][itemNum]["price"].double!
+                var newPrice: Double = 0
+                
+                // New price should never be 0
+                while round(newPrice*10)/10 <= 0 {
+                    newPrice = (1 + (0.1 * (Double(arc4random()) / 0xFFFFFFFF) - 0.05))
+                    if oldPrice > 0.1 {
+                        newPrice *= oldPrice
+                    }
+                    
+                    if contains(up, name) {
+                        newPrice *= 1.2
+                    } else if contains(down, name) {
+                        newPrice *= 0.8
+                    }
+                }
                 self.stores[location]["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
             }
+        }
+        
+        // Randomise the prices of our own items
+        for itemNum in 0...self.user["inventory"].count - 1 {
+            let oldPrice = self.user["inventory"][itemNum]["price"].double!
+            var newPrice: Double = 0
+            
+            // New price should always be > 0
+            while round(newPrice*10)/10 <= 0 {
+                newPrice = (1 + (0.1 * (Double(arc4random()) / 0xFFFFFFFF) - 0.05))
+                if oldPrice > 0.1 {
+                    newPrice *= oldPrice
+                }
+                println(newPrice)
+                println(round(newPrice*10))
+            }
+            self.user["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
         }
     }
     
@@ -312,11 +368,13 @@ extension CityScreenController: NSTableViewDataSource {
                 cellView.textField!.stringValue = String(itemData["quantity"].int!)
             } else if identifier == "ItemPrice" {
                 cellView.textField!.stringValue = "$" + String(stringInterpolationSegment: itemData["price"].double!)
-            } else if contains(kingItems, itemData["name"].string!) {
-                if identifier == "BuyNum" {
-                    println(cellView.subviews)
-                } else if identifier == "BuyButton" {
-                    println(cellView.subviews)
+            } else if contains(kingItems, itemData["name"].string!) && self.owed() > 100 {
+                
+                // Don't let the user buy special items if they owe more than 100
+                // so that they can't get the Gay Agenda on borrowed cash
+                // Remove the buy/quantity stuff to prevent this
+                for subview in cellView.subviews {
+                    subview.removeFromSuperview!()
                 }
             }
         // This section controls the sell table

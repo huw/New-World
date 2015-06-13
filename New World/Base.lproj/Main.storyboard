@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="7706"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
@@ -728,18 +728,18 @@
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5V-Ar-3Bi" userLabel="Headline">
-                                            <rect key="frame" x="23" y="64" width="610" height="79"/>
-                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="HEADLINE" drawsBackground="YES" id="pc6-fx-1Pp">
-                                                <font key="font" size="71" name="HeadlineOneHPLHS"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-MC-CM5" userLabel="New World Gazette">
                                             <rect key="frame" x="78" y="144" width="500" height="25"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="NEW WORLD GAZETTE" drawsBackground="YES" id="56t-W1-waG">
                                                 <font key="font" size="33" name="Telegrafico"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5V-Ar-3Bi" userLabel="Headline">
+                                            <rect key="frame" x="23" y="64" width="610" height="79"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="HEADLINE" drawsBackground="YES" id="pc6-fx-1Pp">
+                                                <font key="font" size="71" name="HeadlineOneHPLHS"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             </textFieldCell>
@@ -788,11 +788,13 @@
                         <outlet property="cashInBank" destination="zjl-c9-CPp" id="Whp-GS-W0C"/>
                         <outlet property="cashInLoans" destination="lQu-aq-Xj6" id="iiq-iO-uNZ"/>
                         <outlet property="cashOnHand" destination="jdE-zO-enW" id="77p-Nz-5ZB"/>
+                        <outlet property="headline" destination="W5V-Ar-3Bi" id="xYg-YU-Rm1"/>
                         <outlet property="location" destination="uaX-4T-AkZ" id="Vfh-Zu-N6Y"/>
                         <outlet property="player" destination="Fqi-5Z-HhF" id="6bj-vZ-l5D"/>
                         <outlet property="sellTableView" destination="Alm-vY-Gli" id="svE-bG-P8W"/>
                         <outlet property="storeLocation" destination="FAH-5C-Lg9" id="oeC-1f-dUC"/>
                         <outlet property="storeName" destination="UZd-Bn-0M1" id="CFL-87-gBo"/>
+                        <outlet property="subtitle" destination="Mxw-ar-gK3" id="lEx-ZW-3KW"/>
                         <outlet property="tableView" destination="WoG-ZS-gLj" id="pPa-ED-9sJ"/>
                     </connections>
                 </viewController>
