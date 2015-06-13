@@ -31,7 +31,6 @@
 		426DEC7B1B14813100AC8E94 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DEC7A1B14813100AC8E94 /* SwiftyJSON.swift */; };
 		426DEC7D1B148B2600AC8E94 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 426DEC7C1B148B2600AC8E94 /* stores.json */; };
 		428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE90E1B005C0B0003FB7C /* MainWindowController.swift */; };
-		42A075F81B1466EC00B4131C /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A075F71B1466EC00B4131C /* EventController.swift */; };
 		42B2D36C1B1D2D4B00B079C1 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 42B2D36B1B1D2D4B00B079C1 /* user.json */; };
 		42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */; };
 		42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */; };
@@ -81,7 +80,6 @@
 		426DEC7A1B14813100AC8E94 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		426DEC7C1B148B2600AC8E94 /* stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
 		428EE90E1B005C0B0003FB7C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		42A075F71B1466EC00B4131C /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		42B2D36B1B1D2D4B00B079C1 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		42B43C6D1B11B74D001EA9E4 /* Button_Large_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Large_BG.png; sourceTree = "<group>"; };
 		42B43C6F1B11BA03001EA9E4 /* Back_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_Arrow.png; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				423425DD1AF9C8DB00CF08DA /* Images.xcassets */,
 				423425DF1AF9C8DC00CF08DA /* Main.storyboard */,
 				426DEC7A1B14813100AC8E94 /* SwiftyJSON.swift */,
-				42A075F71B1466EC00B4131C /* EventController.swift */,
 				4223F78E1B1400C400DD8A8B /* BankController.swift */,
 				42B43C731B11BE89001EA9E4 /* TrainStationController.swift */,
 				4266060E1B0AB5190065C32B /* CityScreenController.swift */,
@@ -322,7 +319,6 @@
 				4266060F1B0AB5190065C32B /* CityScreenController.swift in Sources */,
 				423425DA1AF9C8DA00CF08DA /* AppDelegate.swift in Sources */,
 				426DEC7B1B14813100AC8E94 /* SwiftyJSON.swift in Sources */,
-				42A075F81B1466EC00B4131C /* EventController.swift in Sources */,
 				428EE90F1B005C0B0003FB7C /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

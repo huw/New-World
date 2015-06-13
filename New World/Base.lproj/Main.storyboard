@@ -1342,102 +1342,15 @@
             </objects>
             <point key="canvasLocation" x="1463" y="1731"/>
         </scene>
-        <!--Event-->
-        <scene sceneID="D6X-05-CqC">
-            <objects>
-                <viewController title="💀💀💀" id="o0m-5Q-44h" userLabel="Event" customClass="EventController" customModule="New_World" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="C3i-vn-EJb">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="758"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <visualEffectView wantsLayer="YES" fixedFrame="YES" blendingMode="withinWindow" material="dark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-Dh-2nP" userLabel="Background">
-                                <rect key="frame" x="0.0" y="-42" width="1280" height="800"/>
-                                <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-qa-p2m">
-                                        <rect key="frame" x="-10" y="-10" width="1300" height="820"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Shia" id="LAz-wN-CW4"/>
-                                    </imageView>
-                                </subviews>
-                                <contentFilters>
-                                    <ciFilter name="CIGaussianBlur">
-                                        <configuration>
-                                            <null key="inputImage"/>
-                                            <real key="inputRadius" value="5"/>
-                                        </configuration>
-                                    </ciFilter>
-                                </contentFilters>
-                            </visualEffectView>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phE-fA-5HD" userLabel="Location">
-                                <rect key="frame" x="0.0" y="635" width="1280" height="85"/>
-                                <shadow key="shadow" blurRadius="4">
-                                    <size key="offset" width="0.0" height="2"/>
-                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </shadow>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="EVENT TYPE" id="tof-HW-0Hs">
-                                    <font key="font" size="71" name="UniSansHeavyCAPS"/>
-                                    <color key="textColor" red="1" green="0.86274509799999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24L-nQ-n5z">
-                                <rect key="frame" x="66" y="164" width="1137" height="462"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="You've been attacked by Shia LaBeouf!" id="Hdv-ng-S0n">
-                                    <font key="font" size="35" name="HelveticaNeue-Light"/>
-                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdo-hv-3Dh" userLabel="Flee">
-                                <rect key="frame" x="472" y="50" width="326" height="97"/>
-                                <shadow key="shadow" blurRadius="4">
-                                    <size key="offset" width="0.0" height="2"/>
-                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </shadow>
-                                <buttonCell key="cell" type="squareTextured" title="FLEE" bezelStyle="texturedSquare" image="Button_Event" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="09Y-uX-V6F">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="38" name="HelveticaNeue-Bold"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-gh-CSq" userLabel="Fight">
-                                <rect key="frame" x="66" y="50" width="326" height="97"/>
-                                <shadow key="shadow" blurRadius="4">
-                                    <size key="offset" width="0.0" height="2"/>
-                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </shadow>
-                                <buttonCell key="cell" type="squareTextured" title="FIGHT" bezelStyle="texturedSquare" image="Button_Event" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="PtF-pt-bfV">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="38" name="HelveticaNeue-Bold"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Yh-Dl-zdK" userLabel="Surrender">
-                                <rect key="frame" x="878" y="50" width="326" height="97"/>
-                                <shadow key="shadow" blurRadius="4">
-                                    <size key="offset" width="0.0" height="2"/>
-                                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </shadow>
-                                <buttonCell key="cell" type="squareTextured" title="SURRENDER" bezelStyle="texturedSquare" image="Button_Event" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="h7s-i5-8JQ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="38" name="HelveticaNeue-Bold"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="Xgm-PO-jwx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2167" y="-53"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Back_Arrow" width="29" height="53"/>
         <image name="Bank_BG" width="1182" height="560"/>
         <image name="Blip" width="32" height="32"/>
         <image name="Button_BG" width="256" height="43"/>
-        <image name="Button_Event" width="326" height="97"/>
         <image name="Button_Large_BG" width="237" height="120"/>
         <image name="Button_Thin" width="137" height="48"/>
         <image name="Button_Wide" width="228" height="48"/>
-        <image name="Shia" width="1200" height="700"/>
         <image name="Ticket" width="396" height="61"/>
         <image name="Ticket_Button" width="403" height="71"/>
         <image name="Train_Map" width="960" height="633"/>
