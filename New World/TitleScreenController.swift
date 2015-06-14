@@ -19,7 +19,7 @@ class TitleScreenController: MoviewController {
         
         readFiles()
         
-        self.playVideo(player, fileName: "utopolis")
+        self.playVideo(player, fileName: "titlescreen")
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

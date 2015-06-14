@@ -27,9 +27,13 @@ class TrainStationController: MoviewController {
     @IBOutlet weak var bobsknuckleButton: NSButton!
     @IBOutlet weak var hellButton: NSButton!
     
+    @IBOutlet weak var walkButton: NSButton!
+    @IBOutlet weak var trainButton: NSButton!
+    
     var locationName: String = "Location"
     var previousLocation: String = ""
     var destination: String = ""
+    var train = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,72 +61,10 @@ class TrainStationController: MoviewController {
             attributes: attrs
         )
         
-        self.playVideo(player, fileName: "utopolis")
+        self.playVideo(player, fileName: "trainstation")
         
-        switch locationName {
-        case "treetopgully":
-            steamershillButton.enabled = true
-            newnewtownButton.enabled = true
-            hellButton.enabled = true
-        case "steamershill":
-            treetopgullyButton.enabled = true
-            brokencreekButton.enabled = true
-        case "newnewtown":
-            treetopgullyButton.enabled = true
-            utopolisButton.enabled = true
-        case "utopolis":
-            newnewtownButton.enabled = true
-            bobsknuckleButton.enabled = true
-            somethingButton.enabled = true
-            brokencreekButton.enabled = true
-        case "lavamountain":
-            brokencreekButton.enabled = true
-        case "brokencreek":
-            steamershillButton.enabled = true
-            lavamountainButton.enabled = true
-            utopolisButton.enabled = true
-            somethingButton.enabled = true
-        case "something":
-            bobsknuckleButton.enabled = true
-            brokencreekButton.enabled = true
-            utopolisButton.enabled = true
-        case "bobsknuckle":
-            utopolisButton.enabled = true
-            somethingButton.enabled = true
-            hellButton.enabled = true
-        case "hell":
-            treetopgullyButton.enabled = true
-            bobsknuckleButton.enabled = true
-        default:
-            true
-        }
-        
-        // Block off the previous location (unless it's Broken Creek)
-        switch previousLocation {
-        case "treetopgully":
-            treetopgullyButton.enabled = false
-        case "steamershill":
-            steamershillButton.enabled = false
-        case "newnewtown":
-            newnewtownButton.enabled = false
-        case "utopolis":
-            utopolisButton.enabled = false
-        case "lavamountain":
-            lavamountainButton.enabled = false
-        case "something":
-            somethingButton.enabled = false
-        case "bobsknuckle":
-            bobsknuckleButton.enabled = false
-        case "hell":
-            hellButton.enabled = false
-        default:
-            true
-        }
-        
-        // Don't block the user off into Lava Mountain, but don't always leave Broken Creek available
-        if previousLocation == "brokencreek" && locationName != "lavamountain" {
-            brokencreekButton.enabled = false
-        }
+        resetBlips()
+        blockPrevious()
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -132,6 +74,11 @@ class TrainStationController: MoviewController {
         
         self.user["location"] = JSON(self.destination)
         self.user["previousLocation"] = JSON(self.locationName)
+        
+        // Deduct fare
+        if train {
+            self.user["balance"] = JSON(self.user["balance"].double! - 5)
+        }
         
         next.stores = self.stores
         next.user = self.user
@@ -174,12 +121,144 @@ class TrainStationController: MoviewController {
         setDest("hell")
     }
     
+    @IBAction func pickWalk(sender: AnyObject) {
+        train = false
+        trainButton.enabled = true
+        trainButton.stringValue = "TAKE TRAIN ($5)"
+        walkButton.enabled = false
+        walkButton.stringValue = "WALKING"
+        resetBlips()
+        blockPrevious()
+    }
+    @IBAction func pickTrain(sender: AnyObject) {
+        if self.user["balance"].double! >= 5 {
+            train = true
+            walkButton.enabled = true
+            walkButton.stringValue = "WALK"
+            trainButton.enabled = false
+            trainButton.stringValue = "TAKING TRAIN"
+            resetBlips()
+            
+            // Follow the coloured lines
+            // Due to heavy congestion in Utopolis, you can only take the yellow line to Lava Mountain
+            // A train isn't always convenient, and some people might slip up. Even better :)
+            switch locationName {
+            case "treetopgully":
+                utopolisButton.enabled = true
+            case "steamershill":
+                treetopgullyButton.enabled = true
+                newnewtownButton.enabled = true
+                utopolisButton.enabled = true
+                somethingButton.enabled = true
+            case "utopolis":
+                lavamountainButton.enabled = true
+            case "newnewtown":
+                steamershillButton.enabled = true
+            case "lavamountain":
+                brokencreekButton.enabled = true
+                utopolisButton.enabled = true
+            case "something":
+                hellButton.enabled = true
+                steamershillButton.enabled = true
+            case "bobsknuckle":
+                utopolisButton.enabled = true
+                somethingButton.enabled = true
+                hellButton.enabled = true
+            default: ()
+            }
+            
+            blockPrevious()
+        } else {
+            errorBox("You don't have the cash!", explanation: "You need at least $5 to board a train.")
+        }
+    }
+    
     func setDest(destination: String) {
         self.destination = destination
         destinationLabel.stringValue = self.stores[destination]["name"].stringValue.capitalizedString
         
         if departButton.enabled == false {
             departButton.enabled = true
+        }
+    }
+    
+    func resetBlips() {
+        // Turn off all buttons
+        steamershillButton.enabled = false
+        newnewtownButton.enabled = false
+        hellButton.enabled = false
+        treetopgullyButton.enabled = false
+        brokencreekButton.enabled = false
+        utopolisButton.enabled = false
+        newnewtownButton.enabled = false
+        somethingButton.enabled = false
+        bobsknuckleButton.enabled = false
+        lavamountainButton.enabled = false
+        
+        // Turn on the ones that will always be enabled for this location
+        switch locationName {
+        case "treetopgully":
+            steamershillButton.enabled = true
+            newnewtownButton.enabled = true
+            hellButton.enabled = true
+        case "steamershill":
+            treetopgullyButton.enabled = true
+            brokencreekButton.enabled = true
+        case "newnewtown":
+            treetopgullyButton.enabled = true
+            utopolisButton.enabled = true
+        case "utopolis":
+            newnewtownButton.enabled = true
+            bobsknuckleButton.enabled = true
+            somethingButton.enabled = true
+            brokencreekButton.enabled = true
+        case "lavamountain":
+            brokencreekButton.enabled = true
+        case "brokencreek":
+            steamershillButton.enabled = true
+            lavamountainButton.enabled = true
+            utopolisButton.enabled = true
+            somethingButton.enabled = true
+        case "something":
+            bobsknuckleButton.enabled = true
+            brokencreekButton.enabled = true
+            utopolisButton.enabled = true
+        case "bobsknuckle":
+            utopolisButton.enabled = true
+            somethingButton.enabled = true
+            hellButton.enabled = true
+        case "hell":
+            treetopgullyButton.enabled = true
+            bobsknuckleButton.enabled = true
+        default: ()
+        }
+    }
+    
+    func blockPrevious() {
+        // Block off the previous location (unless it's Broken Creek)
+        switch previousLocation {
+        case "treetopgully":
+            treetopgullyButton.enabled = false
+        case "steamershill":
+            steamershillButton.enabled = false
+        case "newnewtown":
+            newnewtownButton.enabled = false
+        case "utopolis":
+            utopolisButton.enabled = false
+        case "lavamountain":
+            lavamountainButton.enabled = false
+        case "something":
+            somethingButton.enabled = false
+        case "bobsknuckle":
+            bobsknuckleButton.enabled = false
+        case "hell":
+            hellButton.enabled = false
+        default: ()
+        }
+        
+        // Don't block the user off into Lava Mountain, but don't always leave Broken Creek available
+        if previousLocation == "brokencreek" && locationName != "lavamountain" {
+            brokencreekButton.enabled = false
         }
     }
 }

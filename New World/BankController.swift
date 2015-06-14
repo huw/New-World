@@ -52,7 +52,7 @@ class BankController: MoviewController {
             attributes: attrs
         )
         
-        self.playVideo(player, fileName: "utopolis")
+        self.playVideo(player, fileName: "bank")
         
         // Labels
         interestLabel.stringValue = "Interest Rate: " + String(stringInterpolationSegment: self.user["rate"].double!) + "%"

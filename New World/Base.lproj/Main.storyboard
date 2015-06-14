@@ -796,7 +796,7 @@
                                     <size key="offset" width="0.0" height="2"/>
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </shadow>
-                                <buttonCell key="cell" type="squareTextured" title="CATCH A TRAIN" bezelStyle="texturedSquare" image="Button_Large_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="4t2-nj-yme">
+                                <buttonCell key="cell" type="squareTextured" title="MOVE ON" bezelStyle="texturedSquare" image="Button_Large_BG" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="4t2-nj-yme">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="28"/>
                                 </buttonCell>
@@ -918,7 +918,7 @@
                                         </textField>
                                         <button wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXh-FG-Jh1" userLabel="Depart">
                                             <rect key="frame" x="-8" y="-19" width="410" height="100"/>
-                                            <buttonCell key="cell" type="squareTextured" title="DEPART" bezelStyle="texturedSquare" image="Ticket_Button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="sh9-zz-il8">
+                                            <buttonCell key="cell" type="squareTextured" title="DEPART" bezelStyle="texturedSquare" image="Ticket_Button" imagePosition="overlaps" alignment="center" enabled="NO" state="on" imageScaling="proportionallyDown" inset="2" id="sh9-zz-il8">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="systemBold" size="24"/>
                                             </buttonCell>
@@ -1062,6 +1062,26 @@
                                     <action selector="hellClick:" target="p40-xK-G0R" id="QF2-eT-MFv"/>
                                 </connections>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjc-Sd-KVm">
+                                <rect key="frame" x="1075" y="268" width="180" height="50"/>
+                                <buttonCell key="cell" type="squareTextured" title="WALKING" bezelStyle="texturedSquare" image="Button_BG" imagePosition="overlaps" alignment="center" enabled="NO" state="on" imageScaling="proportionallyDown" inset="2" id="ZRQ-v0-NeC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="18" name="HelveticaNeue-Bold"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pickWalk:" target="p40-xK-G0R" id="ZFX-X9-GtJ"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nlv-v3-eqv" userLabel="TRAIN">
+                                <rect key="frame" x="1075" y="220" width="180" height="50"/>
+                                <buttonCell key="cell" type="squareTextured" title="TAKE TRAIN ($5)" bezelStyle="texturedSquare" image="Button_BG" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="ffy-V5-pkv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="18" name="HelveticaNeue-Bold"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pickTrain:" target="p40-xK-G0R" id="6sP-tS-htV"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -1076,8 +1096,10 @@
                         <outlet property="player" destination="73F-8n-WIY" id="Fdv-y7-MTQ"/>
                         <outlet property="somethingButton" destination="zlq-sd-YpK" id="yFZ-nc-jLB"/>
                         <outlet property="steamershillButton" destination="7pu-Hd-677" id="Cvi-v4-4Py"/>
+                        <outlet property="trainButton" destination="Nlv-v3-eqv" id="zUT-cR-Kfz"/>
                         <outlet property="treetopgullyButton" destination="cBq-4t-8zr" id="OUa-nb-Yjt"/>
                         <outlet property="utopolisButton" destination="LNK-WF-J4n" id="oAp-a3-js6"/>
+                        <outlet property="walkButton" destination="Vjc-Sd-KVm" id="AK7-IO-MKA"/>
                     </connections>
                 </viewController>
                 <customObject id="YCS-si-abO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1356,6 +1378,6 @@
         <image name="Train_Map" width="960" height="633"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8rc-8L-qhp"/>
+        <segue reference="k8Q-ok-kKF"/>
     </inferredMetricsTieBreakers>
 </document>

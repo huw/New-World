@@ -60,7 +60,7 @@ class CityScreenController: MoviewController {
         self.previousLocation = self.user["previousLocation"].string!
         
         // Play the video for this location
-        self.playVideo(player, fileName: "utopolis")
+        self.playVideo(player, fileName: locationName)
         
         reloadArrays()
         
@@ -134,14 +134,13 @@ class CityScreenController: MoviewController {
                 // QUANTITY
                 // Add 10% of original quantity
                 var added = round(inventory[itemNum]["quantity"].double! * 0.1)
-                if added == 0 { added = 1 }
-                
-                // 1 in 2 chance of adding anything
                 added *= Double(arc4random_uniform(1))
-                let newQuantity = self.stores[location]["inventory"][itemNum]["quantity"].double! + added
                 
-                // Finally, randomise the item as well
-                self.stores[location]["inventory"][itemNum]["quantity"] = JSON(newQuantity * (1 + (Double(arc4random()) / 0xFFFFFFFF - 0.5)))
+                // Stop the zero items error
+                if added <= 1 { added = 1 }
+                
+                let newQuantity = self.stores[location]["inventory"][itemNum]["quantity"].double! + added
+                self.stores[location]["inventory"][itemNum]["quantity"] = JSON(newQuantity)
                 
                 // PRICE
                 // We just randomise this slightly
@@ -166,20 +165,20 @@ class CityScreenController: MoviewController {
         }
         
         // Randomise the prices of our own items
-        for itemNum in 0...self.user["inventory"].count - 1 {
-            let oldPrice = self.user["inventory"][itemNum]["price"].double!
-            var newPrice: Double = 0
-            
-            // New price should always be > 0
-            while round(newPrice*10)/10 <= 0 {
-                newPrice = (1 + (0.1 * (Double(arc4random()) / 0xFFFFFFFF) - 0.05))
-                if oldPrice > 0.1 {
-                    newPrice *= oldPrice
+        if self.user["inventory"].count > 0 {
+            for itemNum in 0...self.user["inventory"].count - 1 {
+                let oldPrice = self.user["inventory"][itemNum]["price"].double!
+                var newPrice: Double = 0
+                
+                // New price should always be > 0
+                while round(newPrice*10)/10 <= 0 {
+                    newPrice = (1 + (0.1 * (Double(arc4random()) / 0xFFFFFFFF) - 0.05))
+                    if oldPrice > 0.1 {
+                        newPrice *= oldPrice
+                    }
                 }
-                println(newPrice)
-                println(round(newPrice*10))
+                self.user["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
             }
-            self.user["inventory"][itemNum]["price"] = JSON(round(newPrice*10)/10)
         }
     }
     
@@ -253,11 +252,7 @@ class CityScreenController: MoviewController {
             let row = tableView.rowForView(button)
             if row != -1 {
                 if let value = sender.integerValue {
-                    if value > 0 {
-                        buyValues[row] = sender.integerValue!
-                    } else {
-                        errorBox("You entered a number which can't be sold", explanation: "Please enter a number that's bigger than 0")
-                    }
+                    buyValues[row] = sender.integerValue!
                 } else {
                     errorBox("You entered a number which can't be sold", explanation: "Please enter a proper number")
                 }
