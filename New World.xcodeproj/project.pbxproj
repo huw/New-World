@@ -37,16 +37,6 @@
 		42439F901B2D057600D371CB /* titlescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42439F851B2D057600D371CB /* titlescreen.mp4 */; };
 		42439F911B2D057600D371CB /* trainstation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42439F861B2D057600D371CB /* trainstation.mp4 */; };
 		42439F921B2D057600D371CB /* treetopgully.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42439F871B2D057600D371CB /* treetopgully.mp4 */; };
-		42439F9D1B2D0CD100D371CB /* Uni Sans Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F931B2D0CD100D371CB /* Uni Sans Heavy.otf */; };
-		42439F9E1B2D0CD100D371CB /* headlineone.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 42439F941B2D0CD100D371CB /* headlineone.TTF */; };
-		42439F9F1B2D0CD100D371CB /* SourceCodePro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F951B2D0CD100D371CB /* SourceCodePro-Black.ttf */; };
-		42439FA01B2D0CD100D371CB /* SourceCodePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F961B2D0CD100D371CB /* SourceCodePro-Bold.ttf */; };
-		42439FA11B2D0CD100D371CB /* SourceCodePro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F971B2D0CD100D371CB /* SourceCodePro-ExtraLight.ttf */; };
-		42439FA21B2D0CD100D371CB /* SourceCodePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F981B2D0CD100D371CB /* SourceCodePro-Light.ttf */; };
-		42439FA31B2D0CD100D371CB /* SourceCodePro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F991B2D0CD100D371CB /* SourceCodePro-Medium.ttf */; };
-		42439FA41B2D0CD100D371CB /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F9A1B2D0CD100D371CB /* SourceCodePro-Regular.ttf */; };
-		42439FA51B2D0CD100D371CB /* SourceCodePro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F9B1B2D0CD100D371CB /* SourceCodePro-Semibold.ttf */; };
-		42439FA61B2D0CD100D371CB /* telegrafico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42439F9C1B2D0CD100D371CB /* telegrafico.ttf */; };
 		4244485A1B2D0EA400138E1B /* SourceCodePro-Black.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42439F951B2D0CD100D371CB /* SourceCodePro-Black.ttf */; };
 		4244485B1B2D0EB300138E1B /* Uni Sans Heavy.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42439F931B2D0CD100D371CB /* Uni Sans Heavy.otf */; };
 		4244485C1B2D0EB600138E1B /* headlineone.TTF in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42439F941B2D0CD100D371CB /* headlineone.TTF */; };
@@ -368,34 +358,25 @@
 				42439F881B2D057600D371CB /* bank.mp4 in Resources */,
 				42439F8E1B2D057600D371CB /* something.mp4 in Resources */,
 				42439F8F1B2D057600D371CB /* steamershill.mp4 in Resources */,
-				42439FA51B2D0CD100D371CB /* SourceCodePro-Semibold.ttf in Resources */,
 				420801601B14120C00397EE4 /* Button_Event_Special.png in Resources */,
 				4223F78B1B13FDDD00DD8A8B /* Blip.png in Resources */,
 				42BE94BF1B13264F007076A0 /* Ticket.png in Resources */,
-				42439FA41B2D0CD100D371CB /* SourceCodePro-Regular.ttf in Resources */,
 				42439F8C1B2D057600D371CB /* lavamountain.mp4 in Resources */,
 				42439F921B2D057600D371CB /* treetopgully.mp4 in Resources */,
-				42439FA61B2D0CD100D371CB /* telegrafico.ttf in Resources */,
 				42B2D36C1B1D2D4B00B079C1 /* user.json in Resources */,
 				422733861B13246A00533025 /* Ticket_Button.png in Resources */,
 				423425DE1AF9C8DB00CF08DA /* Images.xcassets in Resources */,
 				4208015E1B14120100397EE4 /* Button_Event.png in Resources */,
 				42B43C6E1B11B74D001EA9E4 /* Button_Large_BG.png in Resources */,
 				4223F7891B13FDD000DD8A8B /* Blip_Active.png in Resources */,
-				42439F9F1B2D0CD100D371CB /* SourceCodePro-Black.ttf in Resources */,
 				4223F78D1B13FE1D00DD8A8B /* Blip_Current.png in Resources */,
-				42439FA21B2D0CD100D371CB /* SourceCodePro-Light.ttf in Resources */,
-				42439F9D1B2D0CD100D371CB /* Uni Sans Heavy.otf in Resources */,
 				42C627241B14073B0012E5A3 /* Button_Wide.png in Resources */,
 				42439F911B2D057600D371CB /* trainstation.mp4 in Resources */,
 				42439F8D1B2D057600D371CB /* newnewtown.mp4 in Resources */,
 				4223F7931B14037E00DD8A8B /* Bank_BG.png in Resources */,
 				42B43C721B11BCEF001EA9E4 /* Train_Map.png in Resources */,
-				42439FA31B2D0CD100D371CB /* SourceCodePro-Medium.ttf in Resources */,
 				42C627221B1407340012E5A3 /* Button_Thin.png in Resources */,
 				42B43C701B11BA03001EA9E4 /* Back_Arrow.png in Resources */,
-				42439FA11B2D0CD100D371CB /* SourceCodePro-ExtraLight.ttf in Resources */,
-				42439FA01B2D0CD100D371CB /* SourceCodePro-Bold.ttf in Resources */,
 				423425E11AF9C8DC00CF08DA /* Main.storyboard in Resources */,
 				42439F891B2D057600D371CB /* bobsknuckle.mp4 in Resources */,
 				42439F8B1B2D057600D371CB /* hell.mp4 in Resources */,
@@ -404,7 +385,6 @@
 				42016F521B2AF2B1008C7D90 /* events.json in Resources */,
 				421056EC1B2C12CC008623AF /* user_save.json in Resources */,
 				421056EA1B2C12C2008623AF /* stores_save.json in Resources */,
-				42439F9E1B2D0CD100D371CB /* headlineone.TTF in Resources */,
 				42CC50AB1B0EE41800D7B841 /* utopolis.mp4 in Resources */,
 				4222B19D1B01B23500FCBA0F /* Button_BG.png in Resources */,
 				426DEC7D1B148B2600AC8E94 /* stores.json in Resources */,
